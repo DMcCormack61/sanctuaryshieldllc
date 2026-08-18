@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-display: "Libre Baskerville", "Iowan Old Style", Palatino, serif;
+  --font-sans: "Source Sans 3", "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, monospace;
+
+  --color-bg: #f6f3ec;
+  --color-surface: #ffffff;
+  --color-elevated: #eef2f6;
+  --color-fg: #102a45;
+  --color-muted: #4d5f73;
+  --color-subtle: #7a8796;
+  --color-accent: #dcb22a;
+  --color-accent-fg: #102a45;
+  --color-navy: #102a45;
+  --color-navy-deep: #0b1d33;
+  --color-cream: #f6f3ec;
+  --color-gold: #dcb22a;
+  --color-border: #d4dbe3;
+  --color-ring: #102a45;
+  --color-critical: #b42318;
+  --color-high: #c27814;
+  --color-moderate: #3d6b8c;
+  --color-low: #7a8796;
+
+  --color-background: #f6f3ec;
+  --color-foreground: #102a45;
+  --color-card: #ffffff;
+  --color-card-foreground: #102a45;
+  --color-primary: #dcb22a;
+  --color-primary-foreground: #102a45;
+  --color-secondary: #eef2f6;
+  --color-secondary-foreground: #102a45;
+  --color-muted-foreground: #4d5f73;
+  --color-destructive: #b42318;
+  --color-input: #d4dbe3;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #102a45;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius: 12px;
+
+  --shadow-border: 0 0 0 1px rgba(16, 42, 69, 0.08), 0 1px 2px rgba(16, 42, 69, 0.05);
+  --shadow-border-hover: 0 0 0 1px rgba(16, 42, 69, 0.14), 0 2px 6px rgba(16, 42, 69, 0.08);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-gold) 45%, transparent);
+    color: var(--color-navy);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

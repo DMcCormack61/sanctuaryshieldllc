@@ -1,0 +1,7 @@
+# Append these lines to the EXISTING .htaccess in public_html.
+# Do not replace the whole file — SiteGround already has rules there.
+
+# Sanctuary Shield incident desk (hosted on Vercel at desk.sanctuaryshieldllc.com)
+Redirect 301 /church-attack-headlines.html https://desk.sanctuaryshieldllc.com/
+Redirect 301 /incident-desk https://desk.sanctuaryshieldllc.com/
+Redirect 301 /incident-desk.html https://desk.sanctuaryshieldllc.com/
