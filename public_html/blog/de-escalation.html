@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Short-Circuiting the Cycle with De-Escalation.">
+  <title>The OODA Loop: Biblical Decision-Making in Crisis | Sanctuary Shield</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+    
+    body { font-family: 'Inter', system_ui, sans-serif; }
+    .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.025em; }
+
+    .prose h2, .prose h3 { font-family: 'Playfair Display', Georgia, serif; }
+    .nav-scrolled { background-color: rgba(255,255,255,0.96); backdrop-filter: blur(12px); box-shadow: 0 1px 0 0 rgb(226 232 240); }
+    .gold-accent { color: #c5a46e; }
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800">
+
+  <!-- Navigation (updated to match your latest index.html) -->
+  <nav id="nav" class="bg-white border-b border-stone-200 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <div class="w-9 h-9 rounded-2xl bg-slate-900 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+          </div>
+          <div>
+            <span class="font-semibold text-2xl tracking-tighter text-[#1e3a5f]">Sanctuary</span>
+            <span class="font-semibold text-2xl tracking-tighter gold-accent">Shield</span>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium nav">
+          <a href="../index.html" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+          <a href="../services_table.html" class="nav-link text-slate-600 hover:text-slate-900">Services</a>
+          <a href="../church-attack-headlines.html" class="nav-link text-slate-600 hover:text-slate-900">Headlines</a>
+          <a href="../church-security-news.html" class="nav-link text-slate-600 hover:text-slate-900">Security News</a>
+          <a href="../blog.html" class="nav-link text-slate-600 hover:text-slate-900">Blog</a>
+          <a href="../securing-the-sanctuary.html" class="nav-link text-slate-600 hover:text-slate-900">Book</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex items-center gap-x-3">
+          <a href="../index.html#consultation" 
+             class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-stone-300 text-[#1e3a5f] hover:bg-stone-50 transition-all">
+            Contact Us
+          </a>
+          <a href="../index.html#consultation" 
+             class="inline-flex items-center px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#1e3a5f] text-white hover:bg-[#162d4a] transition-all shadow-sm">
+            Schedule Consultation
+          </a>
+          
+          <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600 hover:text-[#1e3a5f] hover:bg-stone-100 rounded-xl">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+<!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-6 py-4">
+      <div class="flex flex-col gap-y-4 text-sm font-medium">
+        <a href="../index.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Home</a>
+        <a href="../services_table.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Services</a>
+        <a href="../church-attack-headlines.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Headlines</a>
+        <a href="../church-security-news.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Security News</a>
+        <a href="../blog.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Blog</a>
+	      <a href="../securing-the-sanctuary.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Book</a>
+        <div class="pt-3 border-t flex flex-col gap-y-2">
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl border border-stone-300 text-[#1e3a5f] font-semibold">Contact Us</a>
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl bg-[#1e3a5f] text-white font-semibold">Schedule Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Featured Image + Title -->
+  <header class="relative">
+    <img src="graphics/de-escalation.jpg" alt="OODA Loop" class="w-full h-96 lg:h-[28rem] object-cover">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70"></div>
+    
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 absolute bottom-0 left-0 right-0 pb-12">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/90 text-[#1e3a5f] text-xs font-semibold px-4 py-2 rounded-3xl mb-6">
+          Biblical Foundations
+        </div>
+        <h1 class="heading-serif text-4xl lg:text-5xl leading-tight text-white tracking-tighter">
+          Using De-Escalation to Short-Circuit the Cycle of Violence 
+        </h1>
+        <div class="flex items-center gap-x-4 mt-6 text-white/90 text-sm">
+          <span>By W. Daniel McCormack</span>
+          <span class="w-1 h-1 bg-white/60 rounded-full"></span>
+          <span>July 11, 2026</span>
+          <span class="w-1 h-1 bg-white/60 rounded-full"></span>
+          <span>5 min read</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-12">
+    <div class="grid lg:grid-cols-12 gap-10">
+      
+      <!-- Main Content -->
+      <article class="lg:col-span-8 prose prose-slate max-w-none">
+        <p class="lead text-lg text-slate-600">
+        <iframe src="deescalation.pdf" width="100%" height="1200px"></iframe>
+        <div class="my-12 border-l-4 border-amber-600 pl-6 italic text-slate-600">
+          “Unless the LORD watches over the city, the watchman stays awake in vain.” — Psalm 127:1
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4 space-y-8">
+        <div class="bg-white border border-stone-200 rounded-3xl p-6">
+          <h3 class="font-semibold text-lg mb-4">Share this post</h3>
+          <div class="flex gap-4 text-2xl">
+            <a href="#" class="hover:text-[#1e3a5f]"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="hover:text-[#1e3a5f]"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-[#1e3a5f]"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- RELATED POSTS SIDEBAR (Dynamic) -->
+        <div class="bg-white border border-stone-200 rounded-3xl p-6">
+          <h3 class="font-semibold text-lg mb-4 flex items-center gap-x-2">
+              <i class="fa-solid fa-link text-amber-600"></i>
+                        Related Posts
+          </h3>
+        <div id="related-posts-container" class="space-y-4 text-sm">
+       <!-- Populated by JavaScript -->
+        </div>
+  
+        <div class="mt-6 pt-4 border-t border-stone-100 text-center">
+          <a href="../blog.html" 
+             class="inline-flex items-center gap-x-2 text-[#1e3a5f] hover:text-amber-700 font-medium text-xs uppercase tracking-widest">
+          <span>Browse All Blog Posts</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+        <div class="bg-[#1e3a5f] text-white rounded-3xl p-6 text-center">
+          <p class="font-medium">Ready to implement these principles at your church?</p>
+          <a href="../index.html#consultation" 
+             class="mt-4 inline-block px-8 py-3 bg-white text-[#1e3a5f] font-semibold rounded-2xl hover:bg-amber-50">
+            Schedule a Consultation
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="bg-[#1e3a5f] text-slate-300 py-9 text-sm">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-center md:text-left">
+        <div>
+          <div class="flex items-center justify-center md:justify-start gap-x-2 mb-1">
+            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+              <i class="fa-solid fa-shield-halved text-sm text-white"></i>
+            </div>
+            <span class="font-semibold text-white tracking-tighter text-lg">Sanctuary Shield LLC</span>
+          </div>
+          <p class="text-xs">Biblical Wisdom • Practical Protection • Enduring Peace of Mind</p>
+        </div>
+        <div class="text-xs">
+          © 2026 Sanctuary Shield LLC. All rights reserved.<br>
+          Mount Joy, Pennsylvania • Veteran-Owned
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // Navbar scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('nav-scrolled', window.scrollY > 20);
+    });
+  </script>
+  <script>
+  // ====================== BLOG POST DATABASE ======================
+  const allBlogPosts = [
+    {
+      title: "De-Escalation: Short Circuiting Violence",
+      url: "de-escalation.html",
+      date: "2026-07-10",
+      readTime: "6 min",
+      category: "Tactics"
+    },
+    {
+      title: "Protecting Children: The Two-Adult Rule",
+      url: "two-adult-rule.html",
+      date: "2026-06-28",
+      readTime: "4 min",
+      category: "Child Safety"
+    },
+    {
+      title: "Why YOU need a Documented Safety & Security Policy",
+      url: "written-policy.html",
+      date: "2026-06-15",
+      readTime: "8 min",
+      category: "Policy"
+    },
+    {
+      title: "OODA Loop for Rapid Decision-Making",
+      url: "ooda.html",
+      date: "2026-08-01",
+      readTime: "5 min",
+      category: "Biblical Foundations"
+    },
+    {
+      title: "Throw Hymnals?: How NOT to Respond",
+      url: "wa_po.html",
+      date: "2026-07-22",
+      readTime: "3 min",
+      category: "Response"
+    },
+    {
+      title: "Christian Schools and FERPA: Protecting Student Data",
+      url: "christian-school-FERPA.html",
+      date: "2026-07-05",
+      readTime: "7 min",
+      category: "Cyber"
+    },
+  ];
+
+  // ====================== RENDER RELATED POSTS ======================
+  function renderRelatedPosts(currentPostUrl = window.location.pathname) {
+    const container = document.getElementById('related-posts-container');
+    if (!container) return;
+
+    // Exclude the current post
+    const related = allBlogPosts
+      .filter(post => !currentPostUrl.includes(post.url))
+      .sort(() => 0.5 - Math.random())   // simple randomization
+      .slice(0, 4);                      // show up to 4
+
+    let html = '';
+
+    related.forEach(post => {
+      html += `
+        <a href="${post.url}" class="group block">
+          <div class="flex justify-between items-baseline">
+            <p class="font-medium text-slate-700 group-hover:text-[#1e3a5f] transition-colors leading-tight">
+              ${post.title}
+            </p>
+          </div>
+          <div class="text-[10px] text-stone-500 mt-1 flex items-center gap-x-2">
+            <span>${post.category}</span>
+            <span class="w-0.5 h-0.5 bg-stone-300 rounded-full"></span>
+            <span>${post.readTime}</span>
+          </div>
+        </a>
+      `;
+    });
+
+    container.innerHTML = html || '<p class="text-stone-500 text-sm">No related posts yet.</p>';
+  }
+
+  // ====================== INITIALIZE ======================
+  document.addEventListener('DOMContentLoaded', () => {
+    renderRelatedPosts();
+    
+    // Optional: Re-render if you want to support SPA-like navigation later
+    // window.addEventListener('popstate', () => renderRelatedPosts());
+  });
+</script>
+
+
+</body>
+</html>

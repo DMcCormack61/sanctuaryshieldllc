@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aggregated headlines and summaries of recent reported attacks, arson, and targeted vandalism against churches and houses of worship in the US and worldwide. Awareness for church safety and security ministries.">
+  <title>Church Attack Headlines | Sanctuary Shield</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+    
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #c5a46e;
+    }
+
+    .incident-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .incident-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .filter-btn {
+      transition: all 0.2s ease;
+    }
+    
+    .filter-btn.active {
+      background-color: #1e3a5f;
+      color: white;
+      border-color: #1e3a5f;
+    }
+
+    .type-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.125rem 0.625rem;
+      border-radius: 9999px;
+    }
+
+    .nav-scrolled {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 0 rgb(226 232 240);
+    }
+
+    .section-header {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .news-source {
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900">
+
+  <!-- Top Navigation - matched to Sanctuary Shield style -->
+  <nav id="nav" class="bg-white border-b border-zinc-200 sticky top-0 z-50">
+    <div class="max-w-screen-2xl mx-auto">
+      <div class="px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-x-3">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center gap-x-3 group">
+            <div class="w-11 h-11 bg-[#1e3a5f] rounded-xl flex items-center justify-center shadow-inner">
+              <i class="fa-solid fa-shield-halved text-white text-3xl"></i>
+            </div>
+            <div>
+              <span class="font-semibold text-2xl tracking-tighter text-[#1e3a5f]">Sanctuary</span>
+              <span class="block text-[10px] text-zinc-500 -mt-1 tracking-[1.5px]">Shield</span>
+            </div>
+          </a>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-x-8 text-sm">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+          <a href="church-attack-headlines.html" class="nav-link text-slate-600 hover:text-slate-900">Headlines</a>
+          <a href="church-security-news.html" class="nav-link text-slate-600 hover:text-slate-900">Security News</a>
+          <a href="blog.html" class="nav-link text-[#1e3a5f] font-semibold">Blog</a>
+        </div>
+        
+        <div class="flex items-center gap-x-3">
+          <a href="index.html#consultation" 
+             class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-zinc-300 hover:bg-zinc-100 transition-colors">
+            Contact Us
+          </a>
+          <a href="index.html#consultation" 
+             class="inline-flex items-center px-5 py-2.5 bg-[#1e3a5f] hover:bg-zinc-800 text-white text-sm font-semibold rounded-2xl transition-all active:scale-[0.985]">
+            Schedule Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-[#1e3a5f] text-white">
+    <div class="max-w-screen-2xl mx-auto px-6 pt-14 pb-16">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 text-sm">
+          <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+          <span class="font-medium tracking-wide">UPDATED JULY 11, 2026 • CURATED FROM PUBLIC SOURCES</span>
+        </div>
+        
+        <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-serif leading-none mb-4">
+          Church Attack<br>Headlines Monitor
+        </h1>
+        <p class="max-w-2xl text-xl text-zinc-300 mb-8">
+          Reported incidents of arson, shootings, firebombings, and targeted vandalism against houses of worship. 
+          Supporting awareness and preparation for faithful church safety ministries.
+        </p>
+        
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
+          <a href="#incidents" 
+             class="inline-flex items-center justify-center gap-x-2 px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-3xl hover:bg-zinc-100 active:bg-zinc-200 transition-all text-base shadow-lg shadow-black/10">
+            <span>Browse Recent Headlines</span>
+            <i class="fa-solid fa-arrow-down ml-1"></i>
+          </a>
+          <a href="index.html#consultation" 
+             class="inline-flex items-center justify-center gap-x-2 px-7 py-4 border border-white/40 hover:bg-white/10 font-medium rounded-3xl transition-all text-base">
+            Protect Your Church
+          </a>
+        </div>
+        
+        <div class="mt-8 text-sm text-zinc-400 flex items-center gap-x-6">
+          <div class="flex items-center gap-x-2">
+            <i class="fa-solid fa-globe fa-fw"></i>
+            <span>US &amp; International Coverage</span>
+          </div>
+          <div>"We prayed to our God and posted a guard..." — Nehemiah 4:9</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Purpose / Disclaimer -->
+  <div class="max-w-screen-2xl mx-auto px-6 pt-8 pb-4">
+    <div class="max-w-3xl mx-auto bg-white border border-zinc-200 rounded-3xl p-6 text-sm text-zinc-600">
+      <p><strong>Purpose:</strong> This aggregator compiles publicly reported news headlines and summaries of attacks and hostile incidents against Christian churches and houses of worship. It is intended for awareness, risk assessment, and to support the development of biblically grounded safety and security ministries. It is <strong>not exhaustive</strong> and relies on open news sources.</p>
+      <p class="mt-2 text-xs">A production version of this page would use automated backend processes (RSS feeds, News APIs, or scraping with proper rate limiting and legal compliance) to refresh content regularly. This demo uses manually verified recent reports.</p>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="bg-white border-y border-zinc-200">
+    <div class="max-w-screen-2xl mx-auto px-6 py-5">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-4xl font-semibold text-[#1e3a5f]">3+</div>
+          <div class="text-sm text-zinc-500 mt-1 tracking-wide">Major US incidents in past 30 days</div>
+        </div>
+        <div>
+          <div class="text-4xl font-semibold text-[#1e3a5f]">400+</div>
+          <div class="text-sm text-zinc-500 mt-1 tracking-wide">Hostile incidents against US churches since 2020 (FRC data)</div>
+        </div>
+        <div>
+          <div class="text-4xl font-semibold text-[#1e3a5f]">7</div>
+          <div class="text-sm text-zinc-500 mt-1 tracking-wide">Recent headlines highlighted below</div>
+        </div>
+        <div>
+          <div class="text-4xl font-semibold text-[#1e3a5f]">Rising</div>
+          <div class="text-sm text-zinc-500 mt-1 tracking-wide">Arson &amp; targeted vandalism trends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters & Search -->
+  <div id="incidents" class="max-w-screen-2xl mx-auto px-6 pt-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-y-4 mb-6">
+      <div>
+        <h2 class="text-3xl font-semibold tracking-tight section-header">Recent Reported Incidents</h2>
+        <p class="text-zinc-600 mt-1.5">Headlines and first-paragraph summaries from credible news sources</p>
+      </div>
+      
+      <!-- Search -->
+      <div class="relative w-full lg:w-80">
+        <input type="text" id="search-input" 
+               class="w-full pl-11 pr-4 py-3 bg-white border border-zinc-300 focus:border-[#1e3a5f] rounded-3xl text-sm placeholder:text-zinc-400 focus:outline-none"
+               placeholder="Search headline, location, or keyword...">
+        <i class="fa-solid fa-search absolute left-4 top-4 text-zinc-400"></i>
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap gap-2 mb-8" id="filter-buttons">
+      <button data-filter="all" 
+              class="filter-btn active px-5 py-2 text-sm font-medium border border-zinc-300 rounded-3xl hover:bg-zinc-100 flex items-center gap-x-2">
+        <i class="fa-solid fa-globe fa-sm"></i>
+        <span>All Incidents</span>
+      </button>
+      <button data-filter="arson" 
+              class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-300 rounded-3xl hover:bg-zinc-100 flex items-center gap-x-2">
+        <i class="fa-solid fa-fire-flame-curved fa-sm text-orange-600"></i>
+        <span>Arson / Firebombing</span>
+      </button>
+      <button data-filter="shooting" 
+              class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-300 rounded-3xl hover:bg-zinc-100 flex items-center gap-x-2">
+        <i class="fa-solid fa-user-injured fa-sm text-red-600"></i>
+        <span>Shooting / Violence</span>
+      </button>
+      <button data-filter="vandalism" 
+              class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-300 rounded-3xl hover:bg-zinc-100 flex items-center gap-x-2">
+        <i class="fa-solid fa-paint-brush fa-sm text-amber-600"></i>
+        <span>Vandalism / Hate</span>
+      </button>
+      <button data-filter="international" 
+              class="filter-btn px-5 py-2 text-sm font-medium border border-zinc-300 rounded-3xl hover:bg-zinc-100 flex items-center gap-x-2">
+        <i class="fa-solid fa-globe fa-sm text-blue-600"></i>
+        <span>International</span>
+      </button>
+    </div>
+
+    <!-- Incident Grid -->
+    <div id="incident-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1: NYC Molotov July 2026 -->
+      <div class="incident-card bg-white border border-zinc-200 rounded-3xl p-6 flex flex-col" 
+           data-category="arson" data-date="2026-07-09" data-location="queens new york usa">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="type-badge bg-orange-100 text-orange-700">ARSON • FIREBOMBING</div>
+            <div class="text-xs text-zinc-500 mt-1.5 font-mono">JUL 9, 2026</div>
+          </div>
+          <i class="fa-solid fa-map-marker-alt text-zinc-300 text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-xl leading-tight mb-3">
+          <a href="https://www.nbcnewyork.com/queens/queens-church-molotov-cocktail-attack/6523750/" target="_blank" class="hover:text-[#1e3a5f] transition-colors">
+            Video shows NYC houses of worship targeted in Molotov cocktail attacks
+          </a>
+        </h3>
+        <p class="text-zinc-600 text-sm flex-1">Police in Queens arrested a 36-year-old man accused of firebombing two houses of worship overnight. Surveillance video shows the suspect throwing a Molotov cocktail at Iglesia Bautista El Mesias in Ozone Park; he then targeted a Kingdom Hall of Jehovah's Witnesses in nearby Woodhaven. Additional incendiary devices were recovered from his backpack. No injuries reported; fires were quickly extinguished.</p>
+        
+        <div class="mt-5 pt-4 border-t flex items-center justify-between text-sm">
+          <div>
+            <span class="font-medium">Queens, New York</span>
+            <span class="block text-[10px] text-zinc-400">USA • Baptist &amp; Jehovah's Witnesses</span>
+          </div>
+          <a href="https://www.nbcnewyork.com/queens/queens-church-molotov-cocktail-attack/6523750/" target="_blank" 
+             class="inline-flex items-center text-[#1e3a5f] hover:text-blue-700 font-semibold text-sm group">
+            READ FULL 
+            <i class="fa-solid fa-external-link-alt ml-1.5 text-xs group-hover:translate-x-0.5 transition"></i>
+          </a>
+        </div>
+        <div class="text-[10px] text-zinc-400 mt-1">Source: NBC New York / NYPD</div>
+      </div>
+
+      <!-- Card 2: Wichita Vandalism July 2026 -->
+      <div class="incident-card bg-white border border-zinc-200 rounded-3xl p-6 flex flex-col" 
+           data-category="vandalism" data-date="2026-07-03" data-location="wichita kansas usa">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="type-badge bg-amber-100 text-amber-700">VANDALISM • HATE</div>
+            <div class="text-xs text-zinc-500 mt-1.5 font-mono">JUL 3, 2026</div>
+          </div>
+          <i class="fa-solid fa-map-marker-alt text-zinc-300 text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-xl leading-tight mb-3">
+          <a href="https://www.ksn.com/news/crime/antisemitic-vandalism-at-wichita-church-being-investigated-by-police/" target="_blank" class="hover:text-[#1e3a5f] transition-colors">
+            Antisemitic vandalism at Wichita church investigated by police
+          </a>
+        </h3>
+        <p class="text-zinc-600 text-sm flex-1">Wichita police are investigating after antisemitic hate speech and swastika imagery were spray-painted on the exterior walls of Glenn Park Christian Church. The vandalism was discovered on the building in southwest Wichita. Community leaders and police are asking for public tips as they investigate this act of targeted hatred against a house of worship.</p>
+        
+        <div class="mt-5 pt-4 border-t flex items-center justify-between text-sm">
+          <div>
+            <span class="font-medium">Wichita, Kansas</span>
+            <span class="block text-[10px] text-zinc-400">USA • Christian Church</span>
+          </div>
+          <a href="https://www.ksn.com/news/crime/antisemitic-vandalism-at-wichita-church-being-investigated-by-police/" target="_blank" 
+             class="inline-flex items-center text-[#1e3a5f] hover:text-blue-700 font-semibold text-sm group">
+            READ FULL 
+            <i class="fa-solid fa-external-link-alt ml-1.5 text-xs group-hover:translate-x-0.5 transition"></i>
+          </a>
+        </div>
+        <div class="text-[10px] text-zinc-400 mt-1">Source: KSN News / Wichita Police</div>
+      </div>
+
+      <!-- Card 3: Flint Arson (charged 2026) -->
+      <div class="incident-card bg-white border border-zinc-200 rounded-3xl p-6 flex flex-col" 
+           data-category="arson" data-date="2026-06-17" data-location="flint michigan usa">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="type-badge bg-orange-100 text-orange-700">ARSON</div>
+            <div class="text-xs text-zinc-500 mt-1.5 font-mono">CHARGED JUN 2026 • INCIDENT AUG 2025</div>
+          </div>
+          <i class="fa-solid fa-map-marker-alt text-zinc-300 text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-xl leading-tight mb-3">
+          <a href="https://www.insurancejournal.com/news/midwest/2026/06/17/874216.htm" target="_blank" class="hover:text-[#1e3a5f] transition-colors">
+            Michigan man charged with setting fire to St. Mark Missionary Baptist Church
+          </a>
+        </h3>
+        <p class="text-zinc-600 text-sm flex-1">A Flint man faces federal arson and religious freedom obstruction charges after intentionally setting fire to St. Mark Missionary Baptist Church in August 2025. Surveillance video captured the suspect using a gas can to ignite the building. The church was unable to hold services for two months. U.S. Attorney called it “yet another attack against Christians.”</p>
+        
+        <div class="mt-5 pt-4 border-t flex items-center justify-between text-sm">
+          <div>
+            <span class="font-medium">Flint, Michigan</span>
+            <span class="block text-[10px] text-zinc-400">USA • Baptist</span>
+          </div>
+          <a href="https://www.insurancejournal.com/news/midwest/2026/06/17/874216.htm" target="_blank" 
+             class="inline-flex items-center text-[#1e3a5f] hover:text-blue-700 font-semibold text-sm group">
+            READ FULL 
+            <i class="fa-solid fa-external-link-alt ml-1.5 text-xs group-hover:translate-x-0.5 transition"></i>
+          </a>
+        </div>
+        <div class="text-[10px] text-zinc-400 mt-1">Source: Insurance Journal / U.S. Attorney</div>
+      </div>
+
+      <!-- Card 4: Michigan LDS Shooting/Fire Sept 2025 -->
+      <div class="incident-card bg-white border border-zinc-200 rounded-3xl p-6 flex flex-col" 
+           data-category="shooting" data-date="2025-09-28" data-location="grand blanc michigan usa">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="type-badge bg-red-100 text-red-700">SHOOTING • ARSON</div>
+            <div class="text-xs text-zinc-500 mt-1.5 font-mono">SEP 28, 2025</div>
+          </div>
+          <i class="fa-solid fa-map-marker-alt text-zinc-300 text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-xl leading-tight mb-3">
+          <a href="https://www.nytimes.com/2025/09/29/us/michigan-mormon-church-shooting-fire.html" target="_blank" class="hover:text-[#1e3a5f] transition-colors">
+            Michigan Church Shooting and Fire: What We Know
+          </a>
+        </h3>
+        <p class="text-zinc-600 text-sm flex-1">At least four people were killed and eight injured when a gunman rammed a vehicle into a Church of Jesus Christ of Latter-day Saints meetinghouse in Grand Blanc Township, opened fire during worship, and set the building ablaze. The suspect, a 40-year-old ex-Marine, died in a shootout with police. The FBI investigated as an act of targeted violence.</p>
+        
+        <div class="mt-5 pt-4 border-t flex items-center justify-between text-sm">
+          <div>
+            <span class="font-medium">Grand Blanc Township, Michigan</span>
+            <span class="block text-[10px] text-zinc-400">USA • LDS Church</span>
+          </div>
+          <a href="https://www.nytimes.com/2025/09/29/us/michigan-mormon-church-shooting-fire.html" target="_blank" 
+             class="inline-flex items-center text-[#1e3a5f] hover:text-blue-700 font-semibold text-sm group">
+            READ FULL 
+            <i class="fa-solid fa-external-link-alt ml-1.5 text-xs group-hover:translate-x-0.5 transition"></i>
+          </a>
+        </div>
+        <div class="text-[10px] text-zinc-400 mt-1">Source: New York Times / Reuters / FBI</div>
+      </div>
+
+      <!-- Card 5: Minneapolis Church Shooting Aug 2025 -->
+      <div class="incident-card bg-white border border-zinc-200 rounded-3xl p-6 flex flex-col" 
+           data-category="shooting" data-date="2025-08-28" data-location="minneapolis minnesota usa">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="type-badge bg-red-100 text-red-700">SHOOTING</div>
+            <div class="text-xs text-zinc-500 mt-1.5 font-mono">AUG 28, 2025</div>
+          </div>
+          <i class="fa-solid fa-map-marker-alt text-zinc-300 text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-xl leading-tight mb-3">
+          <a href="https://www.npr.org/2025/08/28/nx-s1-5519768/minneapolis-school-shooting-church-what-we-know" target="_blank" class="hover:text-[#1e3a5f] transition-colors">
+            What we know about the Minneapolis Catholic school shooting
+          </a>
+        </h3>
+        <p class="text-zinc-600 text-sm flex-1">A shooter opened fire through the windows of Annunciation Catholic Church in Minneapolis during a Mass marking the first week of school, killing two children (ages 8 and 10) and injuring 17 others, including six children treated at Children's Minnesota. The 23-year-old attacker died by suicide at the scene. Investigated as domestic terrorism and hate crime targeting Catholics.</p>
+        
+        <div class="mt-5 pt-4 border-t flex items-center justify-between text-sm">
+          <div>
+            <span class="font-medium">Minneapolis, Minnesota</span>
+            <span class="block text-[10px] text-zinc-400">USA • Catholic</span>
+          </div>
+          <a href="https://www.npr.org/2025/08/28/nx-s1-5519768/minneapolis-school-shooting-church-what-we-know" target="_blank" 
+             class="inline-flex items-center text-[#1e3a5f] hover:text-blue-700 font-semibold text-sm group">
+            READ FULL 
+            <i class="fa-solid fa-external-link-alt ml-1.5 text-xs group-hover:translate-x-0.5 transition"></i>
+          </a>
+        </div>
+        <div class="text-[10px] text-zinc-400 mt-1">Source: NPR / Minneapolis Police / FBI</div>
+      </div>
+
+      <!-- Card 6: Abilene Church Fire June 2026 -->
+      <div class="incident-card bg-white border border-zinc-200 rounded-3xl p-6 flex flex-col" 
+           data-category="arson" data-date="2026-06-07" data-location="abilene texas usa">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <div class="type-badge bg-orange-100 text-orange-700">FIRE</div>
+            <div class="text-xs text-zinc-500 mt-1.5 font-mono">JUN 7, 2026</div>
+          </div>
+          <i class="fa-solid fa-map-marker-alt text-zinc-300 text-xl"></i>
+        </div>
+        <h3 class="font-semibold text-xl leading-tight mb-3">
+          <a href="https://ktxs.com/news/local/historic-church-that-erupted-in-flames-holds-emotional-sunday-service" target="_blank" class="hover:text-[#1e3a5f] transition-colors">
+            Historic church that erupted in flames holds emotional Sunday service
+          </a>
+        </h3>
+        <p class="text-zinc-600 text-sm flex-1">The historic Nugent Church in Abilene, Texas, built in the late 1800s, was completely destroyed by fire. The congregation gathered for their first service since the blaze at a temporary location, with Pastor Brandon Newton describing it as the beginning of a new chapter. The community has rallied with support as they begin the long road to rebuilding.</p>
+        
+        <div class="mt-5 pt-4 border-t flex items-center justify-between text-sm">
+          <div>
+            <span class="font-medium">Abilene, Texas</span>
+            <span class="block text-[10px] text-zinc-400">USA • Historic Church</span>
+          </div>
+          <a href="https://ktxs.com/news/local/historic-church-that-erupted-in-flames-holds-emotional-sunday-service" target="_blank" 
+             class="inline-flex items-center text-[#1e3a5f] hover:text-blue-700 font-semibold text-sm group">
+            READ FULL 
+            <i class="fa-solid fa-external-link-alt ml-1.5 text-xs group-hover:translate-x-0.5 transition"></i>
+          </a>
+        </div>
+        <div class="text-[10px] text-zinc-400 mt-1">Source: KTXS News</div>
+      </div>
+
+    </div>
+
+    <div class="mt-4 text-center">
+      <p class="text-xs text-zinc-400">This page is manually curated from credible public news sources for awareness and preparedness. Not exhaustive. Report crimes to local authorities. For corrections, contact Sanctuary Shield.</p>
+    </div>
+  </div>
+
+  <!-- How This Helps + CTA -->
+  <div class="max-w-screen-2xl mx-auto px-6 pt-14 pb-10">
+    <div class="bg-white border border-zinc-200 rounded-3xl p-8 md:p-10">
+      <div class="grid md:grid-cols-12 gap-x-10 gap-y-8 items-center">
+        <div class="md:col-span-5">
+          <div class="uppercase tracking-[2px] text-xs font-bold text-emerald-700 mb-2">WHY THIS MATTERS FOR CHURCHES</div>
+          <h3 class="text-3xl font-semibold tracking-tight">Turning Awareness into Protection</h3>
+          <p class="mt-3 text-zinc-600">Patterns in attacks — whether firebombings, arson, shootings, or hate vandalism — reveal evolving threats. Sanctuary Shield helps churches translate this awareness into practical, biblically grounded security measures, policies, and training.</p>
+        </div>
+        <div class="md:col-span-7">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="bg-zinc-50 p-5 rounded-2xl">
+              <i class="fa-solid fa-user-shield text-2xl text-[#1e3a5f] mb-3"></i>
+              <div class="font-semibold">Risk Assessment</div>
+              <div class="text-sm text-zinc-600 mt-1">Identify vulnerabilities specific to your facility, location, and congregation.</div>
+            </div>
+            <div class="bg-zinc-50 p-5 rounded-2xl">
+              <i class="fa-solid fa-book text-2xl text-[#1e3a5f] mb-3"></i>
+              <div class="font-semibold">Policy &amp; Training</div>
+              <div class="text-sm text-zinc-600 mt-1">Develop OODA-based procedures, de-escalation training, and team readiness.</div>
+            </div>
+            <div class="bg-zinc-50 p-5 rounded-2xl">
+              <i class="fa-solid fa-hands-helping text-2xl text-[#1e3a5f] mb-3"></i>
+              <div class="font-semibold">Grant Support</div>
+              <div class="text-sm text-zinc-600 mt-1">Assistance identifying and applying for federal/state grants for security enhancements (NSGP, etc.).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="bg-[#1e3a5f] text-white">
+    <div class="max-w-screen-2xl mx-auto px-6 py-14 text-center">
+      <div class="max-w-md mx-auto">
+        <h3 class="text-3xl font-semibold tracking-tight">Is your church prepared for these realities?</h3>
+        <p class="mt-3 text-zinc-300">Sanctuary Shield provides veteran-led, biblically grounded consulting, training, risk assessments, and procedure development tailored for houses of worship.</p>
+        
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="index.html#consultation" 
+             class="inline-flex justify-center items-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-3xl hover:bg-zinc-100 transition-all">
+            Schedule a Free Consultation
+          </a>
+          <a href="mailto:info@sanctuaryshieldllc.com?subject=Church%20Attack%20Headlines%20Inquiry" 
+             class="inline-flex justify-center items-center px-8 py-4 border border-white/30 hover:bg-white/10 font-medium rounded-3xl transition-all">
+            Email Our Team
+          </a>
+        </div>
+        <p class="mt-6 text-xs text-white/50">Mount Joy, Pennsylvania • Veteran-Owned • Serving churches nationwide</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="max-w-screen-2xl mx-auto px-6 py-8 text-center text-[10px] text-zinc-400">
+    <p>© 2026 Sanctuary Shield LLC. All rights reserved. This page aggregates publicly available news reports for informational and preparedness purposes only. 
+    Sanctuary Shield LLC does not independently verify every incident. Links open in new tabs. “The Lord is my light and my salvation—whom shall I fear?” — Psalm 27:1</p>
+  </footer>
+
+  <script>
+    // Tailwind / interactivity
+    function initializeTailwind() {
+      // Already handled by CDN
+    }
+    
+    // Filter functionality
+    function setupFilters() {
+      const filterButtons = document.querySelectorAll('#filter-buttons button');
+      const incidentCards = document.querySelectorAll('#incident-grid .incident-card');
+      const searchInput = document.getElementById('search-input');
+      
+      let currentFilter = 'all';
+      
+      function filterIncidents() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        
+        incidentCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const location = card.getAttribute('data-location') || '';
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const summary = card.querySelector('p').textContent.toLowerCase();
+          
+          const matchesFilter = currentFilter === 'all' || category.includes(currentFilter);
+          const matchesSearch = !searchTerm || 
+                               location.includes(searchTerm) || 
+                               title.includes(searchTerm) || 
+                               summary.includes(searchTerm);
+          
+          if (matchesFilter && matchesSearch) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+      
+      // Filter button clicks
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active', 'bg-[#1e3a5f]', 'text-white', 'border-[#1e3a5f]'));
+          button.classList.add('active', 'bg-[#1e3a5f]', 'text-white', 'border-[#1e3a5f]');
+          
+          currentFilter = button.getAttribute('data-filter');
+          filterIncidents();
+        });
+      });
+      
+      // Search input
+      searchInput.addEventListener('input', filterIncidents);
+      
+      // Initial state
+      const allBtn = document.querySelector('#filter-buttons button[data-filter="all"]');
+      if (allBtn) allBtn.classList.add('active', 'bg-[#1e3a5f]', 'text-white', 'border-[#1e3a5f]');
+    }
+    
+    // Fake refresh button (add one dynamically or note in UI)
+    function addRefreshFeature() {
+      // Add a subtle refresh hint in the header area if desired
+      const header = document.querySelector('header');
+      if (!header) return;
+      
+      // For demo: clicking the updated date text triggers a refresh simulation
+      const updateBadge = document.querySelector('.inline-flex.items-center.gap-x-2.bg-white\\/10');
+      if (updateBadge) {
+        updateBadge.style.cursor = 'pointer';
+        updateBadge.title = 'Click to simulate data refresh';
+        updateBadge.addEventListener('click', () => {
+          const originalText = updateBadge.innerHTML;
+          updateBadge.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Refreshing from sources...`;
+          
+          setTimeout(() => {
+            updateBadge.innerHTML = originalText;
+            // Show toast
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-6 py-3 rounded-3xl text-sm shadow-xl flex items-center gap-x-2';
+            toast.innerHTML = `<i class="fa-solid fa-check-circle"></i> <span>Data refreshed (demo). In production this would pull latest RSS/API results.</span>`;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+              toast.style.transition = 'all 0.3s';
+              toast.style.opacity = '0';
+              setTimeout(() => toast.remove(), 300);
+            }, 2200);
+          }, 1200);
+        });
+      }
+    }
+    
+    // Navbar scroll effect
+    function initNavbar() {
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      });
+    }
+    
+    // Initialize everything
+    function init() {
+      initializeTailwind();
+      setupFilters();
+      addRefreshFeature();
+      initNavbar();
+      
+      console.log('%c[Sanctuary Shield] Church Attack Headlines page initialized with real recent incidents.', 'color:#1e3a5f');
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>

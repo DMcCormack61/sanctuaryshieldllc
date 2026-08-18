@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Insights, biblical reflections, practical guidance, and resources for church leaders building effective safety &amp; security ministries.">
+  <title>Blog | Sanctuary Shield</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+    
+    body { font-family: 'Inter', system_ui, sans-serif; }
+    .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: -0.025em; }
+
+    .blog-card {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .category-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      padding: 0.125rem 0.75rem;
+    }
+
+    .nav-scrolled {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 0 rgb(226 232 240);
+    }
+
+    .gold-accent { color: #c5a46e; }
+
+    .blog-filter-btn {
+      transition: all 0.2s ease;
+    }
+    .blog-filter-btn.active {
+      background-color: #1e3a5f;
+      color: white;
+      border-color: #1e3a5f;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800">
+
+  <!-- Navigation -->
+  <nav id="nav" class="bg-white border-b border-stone-200 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center gap-x-3">
+          <div class="w-9 h-9 rounded-2xl bg-slate-900 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+          </div>
+          <div>
+            <span class="font-semibold text-2xl tracking-tighter text-[#1e3a5f]">Sanctuary</span>
+            <span class="font-semibold text-2xl tracking-tighter gold-accent">Shield</span>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium nav">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+          <a href="services_table.html" class="nav-link text-slate-600 hover:text-slate-900">Services</a>
+          <a href="church-attack-headlines.html" class="nav-link text-slate-600 hover:text-slate-900">Headlines</a>
+          <a href="church-security-news.html" class="nav-link text-slate-600 hover:text-slate-900">Security News</a>
+          <a href="blog.html" class="nav-link text-slate-600 hover:text-slate-900">Blog</a>
+          <a href="securing-the-sanctuary.html" class="nav-link text-slate-600 hover:text-slate-900">Book</a>
+        </div>
+
+        <div class="flex items-center gap-x-3">
+          <a href="index.html#consultation" 
+             class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-stone-300 text-[#1e3a5f] hover:bg-stone-50 transition-all">
+            Contact Us
+          </a>
+          <a href="index.html#consultation" 
+             class="inline-flex items-center px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#1e3a5f] text-white hover:bg-[#162d4a] transition-all shadow-sm">
+            Schedule Consultation
+          </a>
+          
+          <button id="mobile-menu-btn" 
+                  class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600 hover:text-[#1e3a5f] hover:bg-stone-100 rounded-xl transition-colors"
+                  aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-6 py-4">
+      <div class="flex flex-col gap-y-4 text-sm font-medium">
+        <a href="index.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Home</a>
+        <a href="services_table.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Services</a>
+        <a href="church-attack-headlines.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Headlines</a>
+        <a href="church-security-news.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Security News</a>
+        <a href="blog.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Blog</a>
+        <a href="securing-the-sanctuary.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Book</a>
+        <div class="pt-3 border-t flex flex-col gap-y-2">
+          <a href="index.html#consultation" class="w-full text-center py-3 rounded-2xl border border-stone-300 text-[#1e3a5f] font-semibold">Contact Us</a>
+          <a href="index.html#consultation" class="w-full text-center py-3 rounded-2xl bg-[#1e3a5f] text-white font-semibold">Schedule Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-[#1e3a5f] text-white py-16 lg:py-24">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl text-xs tracking-[2px] mb-6">
+          <i class="fa-solid fa-pen-nib"></i>
+          <span>THOUGHT LEADERSHIP</span>
+        </div>
+        
+        <h1 class="heading-serif text-5xl lg:text-6xl leading-none tracking-tighter mb-6">
+          Sanctuary Insights
+        </h1>
+        <p class="text-xl text-slate-200 max-w-xl">
+          Biblical wisdom, practical guidance, and real-world lessons for church leaders building faithful safety &amp; security ministries.
+        </p>
+        
+        <div class="mt-8 flex items-center gap-x-4 text-sm">
+          <div class="flex items-center gap-x-2">
+            <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            <span class="font-medium">New post every other week</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filters -->
+  <div class="border-b border-stone-200 bg-white sticky top-[79px] z-40">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-6">
+      <div class="flex flex-col lg:flex-row gap-4 lg:items-center">
+        <div class="flex-1 max-w-md">
+          <div class="relative">
+            <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-stone-400"></i>
+            <input id="search-input" 
+                   type="text" 
+                   placeholder="Search titles, excerpts, or authors..." 
+                   class="w-full pl-11 pr-4 py-3 border border-stone-200 focus:border-[#1e3a5f] rounded-2xl text-sm focus:outline-none">
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2" id="category-filters">
+          <button data-category="all" class="blog-filter-btn active px-5 py-2 text-sm font-medium border border-stone-200 rounded-3xl hover:bg-stone-50">All Posts</button>
+          <button data-category="biblical" class="blog-filter-btn px-5 py-2 text-sm font-medium border border-stone-200 rounded-3xl hover:bg-stone-50">Biblical Foundations</button>
+          <button data-category="practical" class="blog-filter-btn px-5 py-2 text-sm font-medium border border-stone-200 rounded-3xl hover:bg-stone-50">Practical Guidance</button>
+          <button data-category="training" class="blog-filter-btn px-5 py-2 text-sm font-medium border border-stone-200 rounded-3xl hover:bg-stone-50">Training &amp; Drills</button>
+          <button data-category="grants" class="blog-filter-btn px-5 py-2 text-sm font-medium border border-stone-200 rounded-3xl hover:bg-stone-50">Grants &amp; Funding</button>
+          <button data-category="christian-schools" class="blog-filter-btn px-5 py-2 text-sm font-medium border border-stone-200 rounded-3xl hover:bg-stone-50">Christian Schools</button>
+          <button data-category="case-studies" class="blog-filter-btn px-5 py-2 text-sm font-medium border border-stone-200 rounded-3xl hover:bg-stone-50">Case Studies</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Grid -->
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-12">
+    <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Populated by JavaScript -->
+    </div>
+
+    <div id="no-results" class="hidden text-center py-20">
+      <i class="fa-solid fa-magnifying-glass text-4xl text-stone-300 mb-4"></i>
+      <p class="text-stone-500">No posts found matching your criteria.</p>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 pb-16">
+    <div class="bg-white border border-stone-200 rounded-3xl p-8 lg:p-12 max-w-2xl mx-auto text-center">
+      <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-3">Stay Informed</h3>
+      <p class="text-slate-600 mb-6">Subscribe to receive new blog posts, grant alerts, and ministry resources directly in your inbox.</p>
+      
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="info@sanctuaryshieldllc.com" required
+               class="flex-1 border border-stone-200 rounded-2xl px-5 py-3 focus:outline-none focus:border-[#1e3a5f]">
+        <button type="submit"
+                class="px-8 py-3 bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-semibold rounded-2xl transition-colors">
+          Subscribe
+        </button>
+      </form>
+      <p class="text-[10px] text-stone-400 mt-4">We respect your inbox. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#1e3a5f] text-slate-300 py-9 text-sm">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-center md:text-left">
+        <div>
+          <div class="flex items-center justify-center md:justify-start gap-x-2 mb-1">
+            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+              <i class="fa-solid fa-shield-halved text-sm text-white"></i>
+            </div>
+            <span class="font-semibold text-white tracking-tighter text-lg">Sanctuary Shield LLC</span>
+          </div>
+          <p class="text-xs">Biblical Wisdom • Practical Protection • Enduring Peace of Mind</p>
+        </div>
+        
+        <div class="text-xs max-w-xs">
+          <span class="font-mono">"Unless the LORD watches over the city, the watchman stays awake in vain."</span><br>
+          <span class="opacity-75">— Psalm 127:1</span>
+        </div>
+        
+        <div class="text-xs">
+          © 2026 Sanctuary Shield LLC. All rights reserved.<br>
+          Mount Joy, Pennsylvania • Veteran-Owned
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ====================== BLOG POSTS (using images & titles from provided file) ======================
+    const blogPosts = [
+      {
+        id: 1,
+        title: "The OODA Loop: Biblical Decision-Making in Crisis",
+        date: "July 9, 2026",
+        readTime: "7 min",
+        category: "biblical",
+        author: "W. Daniel McCormack",
+        excerpt: "How the Observe-Orient-Decide-Act aids rapid decision-making in a crisis.",
+        image: "blog/graphics/ooda.jpg",
+        slug: "ooda-loop"
+      },
+      {
+        id: 2,
+        title: "Protecting Children: Implementing the Two-Adult Rule",
+        date: "July 8, 2026",
+        readTime: "5 min",
+        category: "practical",
+        author: "W. Daniel McCormack",
+        excerpt: "Practical strategies for child protection that maintain a welcoming environment while meeting legal and moral standards of care.",
+        image: "blog/graphics/twoadult.jpg",
+        slug: "two-adult-rule"
+      },
+      {
+        id: 3,
+        title: "De-escalation",
+        date: "July 10, 2026",
+        readTime: "6 min",
+        category: "training",
+        author: "W. Daniel McCormack",
+        excerpt: "Simple techniques that every volunteer can use to peacefully resolve disruptions before they escalate.",
+        image: "blog/graphics/de-escalation.jpg",
+        slug: "de-escalation"
+      },
+      {
+        id: 4,
+        title: "Why Every Church Needs a Written Safety & Security Policy",
+        date: "July 11, 2026",
+        readTime: "8 min",
+        category: "practical",
+        author: "W. Daniel McCormack",
+        excerpt: "The legal, pastoral, and practical reasons for documenting your ministry's approach to safety and security.",
+        image: "blog/graphics/written-policy.jpg",
+        slug: "written-policy"
+      },
+      {
+        id: 5,
+        title: "Throw Hymnals?: How NOT to Deal with an Armed Attacker",
+        date: "July 11, 2026",
+        readTime: "4 min",
+        category: "case-studies",
+        author: "W. Daniel McCormack",
+        excerpt: "Silly advice that should be ignored.",
+        image: "blog/graphics/thrownHymnals.jpg",
+        slug: "wa_po"
+      },
+      {
+        id: 6,
+        title: "Christian Schools and FERPA: Protecting Digital Data",
+        date: "July 11, 2026",
+        readTime: "6 min",
+        category: "christian-schools",
+        author: "W. Daniel McCormack",
+        excerpt: "Understand and apply data protection principles.",
+        image: "blog/graphics/FERPA.jpg",
+        slug: "christian-school-FERPA"
+      },
+      {
+        id: 7,
+        title: "Unique Safety and Security Concerns for Christian Schools",
+        date: "July 11, 2026",
+        readTime: "7 min",
+        category: "christian-schools",
+        author: "W. Daniel McCormack",
+        excerpt: "Understanding the similarities and differences with church safety and security ministry.",
+        image: "blog/graphics/christian-schools.jpg",
+        slug: "christian-schools"
+      }
+    ];
+
+    function renderBlogPosts(filteredPosts) {
+      const grid = document.getElementById('blog-grid');
+      const noResults = document.getElementById('no-results');
+      grid.innerHTML = '';
+
+      if (filteredPosts.length === 0) {
+        noResults.classList.remove('hidden');
+        return;
+      } else {
+        noResults.classList.add('hidden');
+      }
+
+      filteredPosts.forEach((post, index) => {
+        const isFeatured = index === 0;
+        const cardHTML = `
+          <div class="blog-card bg-white border border-stone-200 rounded-3xl overflow-hidden flex flex-col h-full ${isFeatured ? 'ring-2 ring-amber-200' : ''}">
+            <div class="relative">
+              <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+              ${isFeatured ? `<div class="absolute top-4 left-4 bg-amber-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Latest</div>` : ''}
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="category-tag rounded-full bg-amber-100 text-amber-700">${getCategoryLabel(post.category)}</span>
+                <span class="text-xs text-stone-500">${post.date}</span>
+              </div>
+              <h3 class="font-semibold text-xl leading-tight mb-3 text-[#1e3a5f] line-clamp-3">${post.title}</h3>
+              <p class="text-stone-600 text-sm flex-1 line-clamp-4">${post.excerpt}</p>
+              <div class="mt-auto pt-6 border-t border-stone-100 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-x-2">
+                  <i class="fa-solid fa-user text-stone-400"></i>
+                  <span class="text-stone-600">${post.author}</span>
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <span class="text-stone-500">${post.readTime}</span>
+                  <a href="blog/${post.slug}.html" class="inline-flex items-center font-semibold text-[#1e3a5f] hover:text-amber-700">Read →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.innerHTML += cardHTML;
+      });
+    }
+
+    function getCategoryLabel(cat) {
+      const labels = {
+        'biblical': 'Biblical',
+        'practical': 'Practical',
+        'training': 'Training',
+        'grants': 'Grants',
+        'case-studies': 'Case Study'
+      };
+      return labels[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
+    }
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function filterAndRender() {
+      let filtered = [...blogPosts];
+
+      if (currentFilter !== 'all') {
+        filtered = filtered.filter(post => post.category === currentFilter);
+      }
+
+      if (currentSearch) {
+        const term = currentSearch.toLowerCase();
+        filtered = filtered.filter(post => 
+          post.title.toLowerCase().includes(term) ||
+          post.excerpt.toLowerCase().includes(term) ||
+          post.author.toLowerCase().includes(term)
+        );
+      }
+
+      filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+      renderBlogPosts(filtered);
+    }
+
+    function initFilters() {
+      const buttons = document.querySelectorAll('#category-filters button');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.category;
+          filterAndRender();
+        });
+      });
+
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value;
+        filterAndRender();
+      });
+    }
+
+    function initNewsletter() {
+      const form = document.getElementById('newsletter-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button');
+        const original = btn.textContent;
+        btn.textContent = 'Subscribing...';
+        btn.disabled = true;
+        setTimeout(() => {
+          alert('Thank you! You are now subscribed to Sanctuary Insights.');
+          form.reset();
+          btn.textContent = original;
+          btn.disabled = false;
+        }, 800);
+      });
+    }
+
+    function initNavbar() {
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+      });
+
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const icon = mobileBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      });
+    }
+
+    function initialize() {
+      initNavbar();
+      initFilters();
+      initNewsletter();
+      document.querySelector('#category-filters button[data-category="all"]').classList.add('active');
+      filterAndRender();
+    }
+
+    window.onload = initialize;
+  </script>
+</body>
+</html>

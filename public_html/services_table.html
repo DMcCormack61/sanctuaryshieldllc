@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanctuary Shield services: Security &amp; Safety Assessments, Risk Management, Incident Preparedness, Volunteer Security Teams, Grant Writing, Armed &amp; Unarmed Guards, Security Camera Systems, and Ongoing Support for churches.">
+  <title>Services | Sanctuary Shield | Biblical Safety &amp; Security for Churches</title>
+  
+  <!-- Tailwind CSS + Font Awesome (same as your site) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+    
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #c5a46e;
+    }
+
+    .nav-scrolled {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 0 rgb(226 232 240);
+    }
+
+    .service-table tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .section-header {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1rem;
+      line-height: 1.1;
+      font-weight: 700;
+      color: #1e3a5f;
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-slate-800">
+
+  <!-- Navigation (exact match to your site) -->
+  <nav id="nav" class="bg-white border-b border-stone-200 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <a href="index.html" class="flex items-center gap-x-3">
+            <div class="w-9 h-9 rounded-2xl bg-slate-900 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+            </div>
+            <div>
+              <span class="font-semibold text-2xl tracking-tighter text-[#1e3a5f]">Sanctuary</span>
+              <span class="font-semibold text-2xl tracking-tighter gold-accent">Shield</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium nav">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+          <a href="services_table.html" class="nav-link text-slate-600 hover:text-slate-900">Services</a>
+          <a href="church-attack-headlines.html" class="nav-link text-slate-600 hover:text-slate-900">Headlines</a>
+          <a href="church-security-news.html" class="nav-link text-slate-600 hover:text-slate-900">Security News</a>
+          <a href="blog.html" class="nav-link text-slate-600 hover:text-slate-900">Blog</a>
+          <a href="securing-the-sanctuary.html" class="nav-link text-slate-600 hover:text-slate-900">Book</a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex items-center gap-x-3">
+          <a href="index.html#consultation" 
+             class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-stone-300 text-[#1e3a5f] hover:bg-stone-50 transition-all">
+            Contact Us
+          </a>
+          <a href="index.html#consultation" 
+             class="inline-flex items-center px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#1e3a5f] text-white hover:bg-[#162d4a] transition-all shadow-sm">
+            Schedule Consultation
+          </a>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" 
+                  class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600 hover:text-[#1e3a5f] hover:bg-stone-100 rounded-xl transition-colors"
+                  aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-6 py-4">
+      <div class="flex flex-col gap-y-4 text-sm font-medium">
+        <a href="index.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Home</a>
+        <a href="services_table.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Services</a>
+        <a href="church-attack-headlines.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Headlines</a>
+        <a href="church-security-news.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Security News</a>
+        <a href="blog.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Blog</a>
+		        <a href="securing-the-sanctuary.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Book</a>
+        <div class="pt-3 border-t flex flex-col gap-y-2">
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl border border-stone-300 text-[#1e3a5f] font-semibold">Contact Us</a>
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl bg-[#1e3a5f] text-white font-semibold">Schedule Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="bg-[#1e3a5f] text-white">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur px-4 py-1.5 rounded-3xl text-xs tracking-[1.5px] font-medium mb-4">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>PROVEN • BIBLICALLY GROUNDED • PRACTICAL</span>
+        </div>
+        
+        <h1 class="heading-serif text-5xl lg:text-6xl leading-none tracking-tighter mb-6">
+          Our Services
+        </h1>
+        <p class="max-w-xl text-2xl text-slate-200">
+          Comprehensive safety and security solutions designed specifically for churches and Christian organizations.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#services-table" 
+             class="inline-flex items-center px-8 py-4 bg-white text-[#1e3a5f] font-semibold rounded-3xl hover:bg-amber-50 transition-all">
+            View All Services
+          </a>
+          <a href="index.html#consultation" 
+             class="inline-flex items-center px-8 py-4 border border-white/40 hover:bg-white/10 font-medium rounded-3xl transition-all">
+            Schedule Free Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 pt-14 pb-8">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-xl text-slate-600">
+        Every service is customized to your church’s size, location, culture, and specific needs. 
+        We work alongside your leadership to protect your testimony, people, and resources while keeping the focus on ministry.
+      </p>
+    </div>
+  </div>
+
+  <!-- Services Table -->
+  <section id="services-table" class="max-w-screen-2xl mx-auto px-6 lg:px-8 pb-16">
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-white border border-stone-200 rounded-3xl overflow-hidden shadow-sm">
+        <table class="w-full min-w-full divide-y divide-stone-200 text-left">
+          <thead class="bg-[#1e3a5f]">
+            <tr>
+              <th scope="col" class="px-8 py-6 text-sm font-semibold text-white tracking-wider w-1/3">
+                Service
+              </th>
+              <th scope="col" class="px-8 py-6 text-sm font-semibold text-white tracking-wider">
+                Description
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-200 bg-white service-table">
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Security &amp; Safety Assessment</td>
+              <td class="px-8 py-7 text-slate-600">On-site physical, cyber, and testimony vulnerability assessment, facility walkthrough, safety and security risk review, and written report with recommended Courses of Action.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Risk Assessment and Risk Management Plan</td>
+              <td class="px-8 py-7 text-slate-600">Detailed, prioritized risk registry with recommended mitigation for each risk.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Incident Preparedness with Policies &amp; Procedures</td>
+              <td class="px-8 py-7 text-slate-600">Active shooter / violent / disruptive incident preparedness, response protocols, tabletop and crawl-walk-run exercises.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Establishing a Volunteer Security &amp; Safety Team</td>
+              <td class="px-8 py-7 text-slate-600">Recruit, screen, train, and organize a volunteer team (includes tailored policies, drills, and communication plan).</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Establishing a Safety &amp; Security Ministry</td>
+              <td class="px-8 py-7 text-slate-600">Provide structure, policy, procedures, and overall ministry framework tailored to your church. Develop ministry mission statement and integration plan with existing ministries.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Grant Writing</td>
+              <td class="px-8 py-7 text-slate-600">Complete application package for the DHS Nonprofit Security Grant Program (includes risk assessment, budget justification, and submission support).</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Ongoing Support</td>
+              <td class="px-8 py-7 text-slate-600">Phone/Zoom support, quarterly on-site check-ins, remote monthly meetings, plan updates, emergency consultation, and annual policy refresh. Cost varies by support level.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Consulting</td>
+              <td class="px-8 py-7 text-slate-600">Expert consulting on any safety and security topic (building alterations, new construction plans, camera placement, cybersecurity tools &amp; procedures, etc.).</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Armed Security Guard (PA Act 235)</td>
+              <td class="px-8 py-7 text-slate-600">Trained, armed security guard for temporary or ongoing coverage. Open or concealed carry, uniformed or incognito options available.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Unarmed Security Guard Service</td>
+              <td class="px-8 py-7 text-slate-600">Trained unarmed security guard for temporary or ongoing coverage. Uniformed or incognito options available.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Security Camera Planning</td>
+              <td class="px-8 py-7 text-slate-600">Expert guidance on camera placement, quantity, hardware recommendations, and third-party monitoring options.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Security Camera Installation</td>
+              <td class="px-8 py-7 text-slate-600">Full professional installation, system validation, and monitoring plan for your facility.</td>
+            </tr>
+            
+            <tr>
+              <td class="px-8 py-7 font-semibold text-[#1e3a5f]">Security Camera Monitoring</td>
+              <td class="px-8 py-7 text-slate-600">Flexible monitoring plans ranging from selected hours to 24/7/365 coverage.</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <div class="bg-white border-t border-stone-200 py-14">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 text-center">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="heading-serif text-3xl text-[#1e3a5f] mb-4">Ready to protect what matters most?</h2>
+        <p class="text-lg text-slate-600 mb-8">Schedule your complimentary 45-minute initial consultation. We’ll discuss your specific situation and help determine the best path forward.</p>
+        
+        <a href="index.html#consultation" 
+           class="inline-flex items-center justify-center gap-x-3 px-10 py-4 text-lg font-semibold rounded-3xl bg-[#1e3a5f] text-white hover:bg-[#162d4a] transition-all shadow-lg">
+          Schedule Your Free Consultation
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        
+        <p class="mt-4 text-sm text-slate-500">No obligation. We typically respond within one business day.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (exact match) -->
+  <footer class="bg-[#1e3a5f] text-slate-300 py-9 text-sm">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-center md:text-left">
+        <div>
+          <div class="flex items-center justify-center md:justify-start gap-x-2 mb-1">
+            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+              <i class="fa-solid fa-shield-halved text-sm text-white"></i>
+            </div>
+            <span class="font-semibold text-white tracking-tighter text-lg">Sanctuary Shield LLC</span>
+          </div>
+          <p class="text-xs">Biblical Wisdom • Practical Protection • Enduring Peace of Mind</p>
+        </div>
+        
+        <div class="text-xs max-w-xs">
+          <span class="font-mono">"Unless the LORD builds the house, those who build it labor in vain..."</span><br>
+          <span class="opacity-75">— Psalm 127:1</span>
+        </div>
+        
+        <div class="text-xs">
+          © 2026 Sanctuary Shield LLC. All rights reserved.<br>
+          <a href="index.html" class="hover:text-white">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect + mobile menu (same as your site)
+    function initNavbar() {
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      });
+      
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          const icon = mobileBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+          }
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileBtn.querySelector('i');
+            if (icon) {
+              icon.classList.add('fa-bars');
+              icon.classList.remove('fa-times');
+            }
+          });
+        });
+      }
+    }
+    
+    function initializePage() {
+      initNavbar();
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializePage);
+    } else {
+      initializePage();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated news, grant updates, training resources, and security insights for churches and houses of worship.">
+  <title>Church Security News | Sanctuary Shield</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap');
+    
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #c5a46e;
+    }
+
+    .news-card {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+    }
+    
+    .news-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    .category-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .nav {
+      font-size: 0.95rem;
+    }
+
+    .nav-scrolled {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 0 rgb(226 232 240);
+    }
+
+    .gold-accent {
+      color: #c5a46e;
+    }
+
+    .news-filter-btn {
+      transition: all 0.1s ease;
+    }
+    
+    .news-filter-btn.active {
+      background-color: #1e3a5f;
+      color: white;
+      border-color: #1e3a5f;
+    }
+
+    .section-header {
+      font-family: 'Playfair Display', Georgia, serif;
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYXXK646PG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YYXXK646PG');
+</script>
+<body class="bg-stone-50 text-slate-800">
+
+  <!-- Navigation - matched exactly to index.html structure -->
+  <nav id="nav" class="bg-white border-b border-stone-200 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <div class="w-9 h-9 rounded-2xl bg-slate-900 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+          </div>
+          <div>
+            <span class="font-semibold text-2xl tracking-tighter text-[#1e3a5f]">Sanctuary</span>
+            <span class="font-semibold text-2xl tracking-tighter gold-accent">Shield</span>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium nav">
+          <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+          <a href="services_table.html" class="nav-link text-slate-600 hover:text-slate-900">Services</a>
+          <a href="church-attack-headlines.html" class="nav-link text-slate-600 hover:text-slate-900">Headlines</a>
+          <a href="church-security-news.html" class="nav-link text-slate-600 hover:text-slate-900">Security News</a>
+          <a href="blog.html" class="nav-link text-slate-600 hover:text-slate-900">Blog</a>
+          <a href="securing-the-sanctuary.html" class="nav-link text-slate-600 hover:text-slate-900">Book</a>
+        </div>
+
+        <!-- CTA Buttons - same as index.html -->
+        <div class="flex items-center gap-x-3">
+          <a href="index.html#consultation" 
+             class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-stone-300 text-[#1e3a5f] hover:bg-stone-50 transition-all">
+            Contact Us
+          </a>
+          <a href="index.html#consultation" 
+             class="inline-flex items-center px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#1e3a5f] text-white hover:bg-[#162d4a] transition-all shadow-sm">
+            Schedule Consultation
+          </a>
+          
+          <!-- Mobile Menu -->
+          <button id="mobile-menu-btn" 
+                  class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600 hover:text-[#1e3a5f] hover:bg-stone-100 rounded-xl transition-colors"
+                  aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-6 py-4">
+      <div class="flex flex-col gap-y-4 text-sm font-medium">
+        <a href="index.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Home</a>
+        <a href="services_table.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Services</a>
+        <a href="church-attack-headlines.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Headlines</a>
+        <a href="church-security-news.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Security News</a>
+        <a href="blog.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Blog</a>
+		        <a href="securing-the-sanctuary.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Book</a>
+        <div class="pt-3 border-t flex flex-col gap-y-2">
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl border border-stone-300 text-[#1e3a5f] font-semibold">Contact Us</a>
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl bg-[#1e3a5f] text-white font-semibold">Schedule Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-[#1e3a5f] text-white">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-14 lg:py-16">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur px-4 py-1.5 rounded-3xl text-xs tracking-[1.5px] font-medium mb-4">
+          <i class="fa-solid fa-newspaper"></i>
+          <span>CURATED AGGREGATION</span>
+        </div>
+        
+        <h1 class="heading-serif text-5xl lg:text-6xl leading-none tracking-tighter mb-4">
+          Church Security News
+        </h1>
+        <p class="max-w-xl text-xl text-slate-200">
+          Timely updates on grants, threats, training, legal developments, and best practices for protecting houses of worship.
+        </p>
+        
+        <div class="flex items-center gap-x-4 mt-8 text-sm">
+          <div class="flex items-center gap-x-2 bg-white/10 px-3 py-1.5 rounded-2xl">
+            <i class="fa-solid fa-rss text-amber-300"></i>
+            <span>Updated regularly from trusted sources</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filters & Search -->
+  <div class="border-b border-stone-200 bg-white sticky top-[79px] z-40">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-5">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-y-4 gap-x-6">
+        
+        <!-- Search -->
+        <div class="flex-1 max-w-md">
+          <div class="relative">
+            <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-stone-400"></i>
+            <input id="search-input" 
+                   type="text" 
+                   placeholder="Search news, grants, or topics..." 
+                   class="w-full pl-11 pr-4 py-3 border border-stone-200 focus:border-[#1e3a5f] rounded-2xl text-sm focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="flex flex-wrap items-center gap-2" id="category-filters">
+          <button data-category="all" class="news-filter-btn active px-4 py-2 text-xs font-medium border border-stone-200 bg-white rounded-2xl hover:bg-stone-50">All</button>
+          <button data-category="grants" class="news-filter-btn px-4 py-2 text-xs font-medium border border-stone-200 bg-white rounded-2xl hover:bg-stone-50">Grants &amp; Funding</button>
+          <button data-category="physical" class="news-filter-btn px-4 py-2 text-xs font-medium border border-stone-200 bg-white rounded-2xl hover:bg-stone-50">Physical Security</button>
+          <button data-category="training" class="news-filter-btn px-4 py-2 text-xs font-medium border border-stone-200 bg-white rounded-2xl hover:bg-stone-50">Training &amp; Preparedness</button>
+          <button data-category="legal" class="news-filter-btn px-4 py-2 text-xs font-medium border border-stone-200 bg-white rounded-2xl hover:bg-stone-50">Legal &amp; Policy</button>
+          <button data-category="cyber" class="news-filter-btn px-4 py-2 text-xs font-medium border border-stone-200 bg-white rounded-2xl hover:bg-stone-50">Cyber &amp; Data</button>
+          <button data-category="incidents" class="news-filter-btn px-4 py-2 text-xs font-medium border border-stone-200 bg-white rounded-2xl hover:bg-stone-50">Incidents &amp; Reports</button>
+        </div>
+
+        <!-- Sort -->
+        <div class="flex items-center gap-x-2 ml-auto">
+          <select id="sort-select" class="text-sm border border-stone-200 bg-white rounded-2xl px-3 py-2 focus:outline-none focus:border-[#1e3a5f]">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-10">
+    <div class="flex flex-col lg:flex-row gap-8">
+      
+      <!-- News Feed -->
+      <div class="flex-1">
+        <div class="flex items-center justify-between mb-5">
+          <h2 class="text-xl font-semibold tracking-tight text-[#1e3a5f]">Latest Updates <span id="results-count" class="text-sm font-normal text-stone-500"></span></h2>
+          <div class="text-xs text-stone-500 hidden md:block">Curated from FEMA, CISA, FBI, Church Law &amp; Tax, and trusted partners</div>
+        </div>
+
+        <!-- News Grid -->
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <div id="no-results" class="hidden text-center py-12 text-stone-500">
+          <i class="fa-solid fa-search text-2xl mb-3"></i>
+          <p>No articles match your filters. Try broadening your search.</p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="w-full lg:w-80 xl:w-96 flex-shrink-0">
+        <div class="space-y-8 sticky top-28">
+          
+          <!-- Subscribe / Alerts -->
+          <div class="bg-white border border-stone-200 rounded-3xl p-6">
+            <h3 class="font-semibold text-lg text-[#1e3a5f] mb-1">Get Security Alerts</h3>
+            <p class="text-sm text-stone-600 mb-4">Receive curated updates on grants, incidents, and new resources.</p>
+            
+            <form id="alert-form" class="space-y-3">
+              <input type="email" placeholder="Your email address" required 
+                     class="w-full border border-stone-200 rounded-2xl px-4 py-2.5 text-sm focus:outline-none focus:border-[#1e3a5f]">
+              <button type="submit" 
+                      class="w-full py-2.5 bg-[#1e3a5f] text-white text-sm font-semibold rounded-2xl hover:bg-[#162d4a] transition-colors">
+                Subscribe to Alerts
+              </button>
+            </form>
+            <p class="text-[10px] text-stone-400 mt-2">We respect your inbox. Unsubscribe anytime.</p>
+          </div>
+
+          <!-- Key Resources -->
+          <div class="bg-white border border-stone-200 rounded-3xl p-6">
+            <h3 class="font-semibold text-lg text-[#1e3a5f] mb-4">Essential Resources</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="https://www.fema.gov/grants/preparedness/nonprofit-security" target="_blank" class="flex items-center gap-x-2 text-[#1e3a5f] hover:underline">
+                  <i class="fa-solid fa-external-link-alt w-3.5 text-stone-400"></i>
+                  <span>FEMA Nonprofit Security Grant Program (NSGP)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cisa.gov/topics/physical-security/protecting-houses-worship" target="_blank" class="flex items-center gap-x-2 text-[#1e3a5f] hover:underline">
+                  <i class="fa-solid fa-external-link-alt w-3.5 text-stone-400"></i>
+                  <span>CISA Houses of Worship Security Resources</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.fbi.gov/file-repository/developing_eops_for_houses_of_worship_final.pdf/view" target="_blank" class="flex items-center gap-x-2 text-[#1e3a5f] hover:underline">
+                  <i class="fa-solid fa-external-link-alt w-3.5 text-stone-400"></i>
+                  <span>FBI Emergency Operations Plans Guide</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cisa.gov/houses-worship-security-self-assessment" target="_blank" class="flex items-center gap-x-2 text-[#1e3a5f] hover:underline">
+                  <i class="fa-solid fa-external-link-alt w-3.5 text-stone-400"></i>
+                  <span>CISA Houses of Worship Self-Assessment</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Trending Topics -->
+          <div class="bg-white border border-stone-200 rounded-3xl p-6">
+            <h3 class="font-semibold text-lg text-[#1e3a5f] mb-4">Trending Topics</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs bg-stone-100 rounded-2xl">NSGP 2026 Grants</span>
+              <span class="px-3 py-1 text-xs bg-stone-100 rounded-2xl">Active Violence Training</span>
+              <span class="px-3 py-1 text-xs bg-stone-100 rounded-2xl">Facility Hardening</span>
+              <span class="px-3 py-1 text-xs bg-stone-100 rounded-2xl">Cybersecurity</span>
+              <span class="px-3 py-1 text-xs bg-stone-100 rounded-2xl">State Security Grants</span>
+              <span class="px-3 py-1 text-xs bg-stone-100 rounded-2xl">Emergency Planning</span>
+            </div>
+          </div>
+
+          <div class="text-center text-xs text-stone-400 px-2">
+            This page is curated for Sanctuary Shield clients and partners. 
+            For full aggregation services, <a href="index.html#consultation" class="underline">contact us</a>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#1e3a5f] text-slate-300 py-9 text-sm mt-12">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-center md:text-left">
+        <div>
+          <div class="flex items-center justify-center md:justify-start gap-x-2 mb-1">
+            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+              <i class="fa-solid fa-shield-halved text-sm text-white"></i>
+            </div>
+            <span class="font-semibold text-white tracking-tighter text-lg">Sanctuary Shield LLC</span>
+          </div>
+          <p class="text-xs">Biblical Wisdom • Practical Protection • Enduring Peace of Mind</p>
+        </div>
+        
+        <div class="text-xs max-w-xs">
+          <span class="font-mono">"Unless the LORD builds the house, those who build it labor in vain..."</span><br>
+          <span class="opacity-75">— Psalm 127:1</span>
+        </div>
+        
+        <div class="text-xs">
+          © 2026 Sanctuary Shield LLC. All rights reserved.<br>
+          <a href="index.html" class="hover:text-white">Back to Main Site</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // News data - curated aggregation
+    const newsData = [
+      {
+        id: 1,
+        title: "FEMA Releases FY 2026 Nonprofit Security Grant Program Notice of Funding Opportunity",
+        date: "2026-06-24",
+        category: "grants",
+        source: "FEMA",
+        sourceUrl: "https://www.fema.gov/grants/preparedness/nonprofit-security",
+        excerpt: "Up to $200,000 per location available for physical security enhancements, training, and planning for houses of worship and other nonprofits.",
+        link: "https://www.fema.gov/grants/preparedness/nonprofit-security",
+        tags: ["NSGP", "Funding"]
+      },
+      {
+        id: 2,
+        title: "800% Increase in Hostility Against Churches Documented Since 2018",
+        date: "2026-06-15",
+        category: "incidents",
+        source: "Family Research Council",
+        sourceUrl: "https://www.frc.org/HostilityAgainstChurches",
+        excerpt: "New report shows more than 430 hostile incidents against churches in 2023 alone, with attacks accelerating dramatically in recent years.",
+        link: "https://www.frc.org/HostilityAgainstChurches",
+        tags: ["Statistics", "Threats"]
+      },
+      {
+        id: 3,
+        title: "2026 NSGP Guide: How Churches Can Secure Up to $200,000 in Federal Funding",
+        date: "2026-06-20",
+        category: "grants",
+        source: "Ministry Boost",
+        sourceUrl: "https://ministryboost.org",
+        excerpt: "Detailed walkthrough of the application process for the Nonprofit Security Grant Program, including what qualifies for hardening projects and training.",
+        link: "https://ministryboost.org/church-security-grants-nsgp-guide/",
+        tags: ["NSGP", "Grants"]
+      },
+      {
+        id: 4,
+        title: "Loudoun County Sheriff's Office Hosts Houses of Worship Safety Summit 2026",
+        date: "2026-03-04",
+        category: "training",
+        source: "Loudoun County Sheriff's Office",
+        sourceUrl: "https://www.loudoun.gov/",
+        excerpt: "Active violence incident training, security best practices, and guidance on addressing agitators shared with clergy and security teams.",
+        link: "https://www.facebook.com/LoudounSheriff/posts/-houses-of-worship-safety-summit-2026the-lcso-is-partnering-with-faith-based-com/1394481139384931/",
+        tags: ["Training", "Local"]
+      },
+      {
+        id: 5,
+        title: "CISA Publishes Updated Mitigating Attacks on Houses of Worship Security Guide",
+        date: "2026-05-10",
+        category: "physical",
+        source: "CISA",
+        sourceUrl: "https://www.cisa.gov/topics/physical-security/protecting-houses-worship",
+        excerpt: "Analysis of ten years of targeted attacks provides actionable recommendations for physical security, planning, and response for faith communities.",
+        link: "https://www.cisa.gov/topics/physical-security/protecting-houses-worship/resources",
+        tags: ["Physical Security", "CISA"]
+      },
+      {
+        id: 6,
+        title: "New York Securing Communities Against Hate Crimes Grant Applications Now Open",
+        date: "2026-06-10",
+        category: "grants",
+        source: "New York State",
+        sourceUrl: "https://www.governor.ny.gov/",
+        excerpt: "Significant funding available for nonprofit organizations, including houses of worship, to enhance security against targeted violence.",
+        link: "https://www.governor.ny.gov/apply-securing-communities-against-hate-crimes-grant-program",
+        tags: ["State Grants", "Funding"]
+      },
+      {
+        id: 7,
+        title: "FBI and Partners Release Updated Emergency Operations Planning Guide for Houses of Worship",
+        date: "2026-04-22",
+        category: "training",
+        source: "FBI",
+        sourceUrl: "https://www.fbi.gov/",
+        excerpt: "Revised guidance helps churches develop high-quality emergency operations plans covering active shooter, medical emergencies, and natural disasters.",
+        link: "https://www.fbi.gov/file-repository/reports-and-publications/developing_eops_for_houses_of_worship_final.pdf/view",
+        tags: ["EOP", "Planning"]
+      },
+      {
+        id: 8,
+        title: "Rising Cybersecurity Threats Target Small Churches and Faith-Based Nonprofits",
+        date: "2026-05-28",
+        category: "cyber",
+        source: "Church Law & Tax",
+        sourceUrl: "https://www.churchlawandtax.com/",
+        excerpt: "Ransomware and phishing attacks are increasing. Experts recommend basic cybersecurity hygiene and incident response planning for congregations.",
+        link: "https://www.churchlawandtax.com/",
+        tags: ["Cybersecurity", "Data"]
+      },
+      {
+        id: 9,
+        title: "California and Pennsylvania Expand Nonprofit Security Grant Programs for 2026",
+        date: "2026-06-01",
+        category: "grants",
+        source: "State Agencies",
+        sourceUrl: "https://www.grants.ca.gov/",
+        excerpt: "Multiple states are increasing available funding for faith-based organizations to harden facilities against ideological and targeted violence.",
+        link: "https://www.grants.ca.gov/grants/2024-25-california-state-nonprofit-security-grant-program-csnsgp/",
+        tags: ["State Grants", "Funding"]
+      },
+      {
+        id: 10,
+        title: "New Data Shows Churches with Security Teams Experience Fewer Successful Incidents",
+        date: "2026-02-18",
+        category: "incidents",
+        source: "Christianity Today",
+        sourceUrl: "https://www.christianitytoday.com/",
+        excerpt: "Analysis of recent incidents indicates that trained volunteer security teams and clear emergency protocols significantly improve outcomes.",
+        link: "https://www.christianitytoday.com/",
+        tags: ["Data", "Best Practices"]
+      }
+    ];
+
+    // Render news cards
+    function renderNews(filteredNews) {
+      const grid = document.getElementById('news-grid');
+      const noResults = document.getElementById('no-results');
+      grid.innerHTML = '';
+
+      if (filteredNews.length === 0) {
+        noResults.classList.remove('hidden');
+        document.getElementById('results-count').textContent = '(0 results)';
+        return;
+      } else {
+        noResults.classList.add('hidden');
+      }
+
+      document.getElementById('results-count').textContent = `(${filteredNews.length} articles)`;
+
+      filteredNews.forEach(article => {
+        const card = document.createElement('div');
+        card.className = 'news-card bg-white border border-stone-200 rounded-3xl p-6 flex flex-col';
+        
+        const dateObj = new Date(article.date);
+        const formattedDate = dateObj.toLocaleDateString('en-US', { 
+          month: 'short', 
+          day: 'numeric', 
+          year: 'numeric' 
+        });
+
+        const categoryLabel = getCategoryLabel(article.category);
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-3">
+            <span class="category-tag px-2.5 py-0.5 rounded bg-[#f1e7d2] text-[#1e3a5f]">${categoryLabel}</span>
+            <span class="text-xs text-stone-500">${formattedDate}</span>
+          </div>
+          
+          <h3 class="font-semibold text-lg leading-tight text-[#1e3a5f] mb-2 line-clamp-3">${article.title}</h3>
+          
+          <div class="flex items-center gap-x-2 text-xs mb-3">
+            <span class="font-medium text-stone-600">${article.source}</span>
+          </div>
+          
+          <p class="text-sm text-stone-600 flex-1 mb-4 line-clamp-3">${article.excerpt}</p>
+          
+          <div class="flex items-center justify-between mt-auto">
+            <a href="${article.link}" target="_blank" 
+               class="inline-flex items-center text-sm font-semibold text-[#1e3a5f] hover:text-amber-700 transition-colors">
+              Read full article <i class="fa-solid fa-arrow-up-right-from-square ml-1.5 text-xs"></i>
+            </a>
+            
+            <div class="flex gap-1">
+              ${article.tags.map(tag => 
+                `<span class="px-2 py-0.5 text-[10px] bg-stone-100 rounded text-stone-500">${tag}</span>`
+              ).join('')}
+            </div>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+    }
+
+    function getCategoryLabel(cat) {
+      const labels = {
+        'grants': 'Grants & Funding',
+        'physical': 'Physical Security',
+        'training': 'Training',
+        'legal': 'Legal & Policy',
+        'cyber': 'Cyber & Data',
+        'incidents': 'Incidents'
+      };
+      return labels[cat] || cat;
+    }
+
+    // Filter logic
+    let currentFilter = 'all';
+    let currentSearch = '';
+    let currentSort = 'newest';
+
+    function filterAndRender() {
+      let filtered = [...newsData];
+
+      if (currentFilter !== 'all') {
+        filtered = filtered.filter(item => item.category === currentFilter);
+      }
+
+      if (currentSearch) {
+        const term = currentSearch.toLowerCase();
+        filtered = filtered.filter(item => 
+          item.title.toLowerCase().includes(term) ||
+          item.excerpt.toLowerCase().includes(term) ||
+          item.source.toLowerCase().includes(term) ||
+          item.tags.some(t => t.toLowerCase().includes(term))
+        );
+      }
+
+      filtered.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
+      });
+
+      renderNews(filtered);
+    }
+
+    function initFilters() {
+      const buttons = document.querySelectorAll('#category-filters button');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.category;
+          filterAndRender();
+        });
+      });
+
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value;
+        filterAndRender();
+      });
+
+      const sortSelect = document.getElementById('sort-select');
+      sortSelect.addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        filterAndRender();
+      });
+
+      filterAndRender();
+    }
+
+    function initAlertForm() {
+      const form = document.getElementById('alert-form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = form.querySelector('input');
+        const originalText = form.querySelector('button').innerHTML;
+        
+        form.querySelector('button').disabled = true;
+        form.querySelector('button').innerHTML = 'Subscribing...';
+
+        setTimeout(() => {
+          form.querySelector('button').innerHTML = 'Thank you!';
+          form.querySelector('button').classList.add('!bg-emerald-600');
+          
+          setTimeout(() => {
+            alert('Thank you! You have been subscribed to church security alerts (demo).');
+            form.reset();
+            form.querySelector('button').innerHTML = originalText;
+            form.querySelector('button').disabled = false;
+            form.querySelector('button').classList.remove('!bg-emerald-600');
+          }, 1600);
+        }, 900);
+      });
+    }
+
+    function initNavbar() {
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      });
+
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          const icon = mobileBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+          }
+        });
+      }
+    }
+
+    function initKeyboard() {
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+          e.preventDefault();
+          document.getElementById('search-input').focus();
+        }
+      });
+    }
+
+    function initialize() {
+      initNavbar();
+      initFilters();
+      initAlertForm();
+      initKeyboard();
+
+      document.querySelector('#category-filters button[data-category="all"]').classList.add('active');
+
+      console.log('%c[Sanctuary Shield] Church Security News page with matching header.', 'color:#64748b');
+    }
+
+    window.onload = initialize;
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+[15-Jun-2026 14:29:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[15-Jun-2026 19:55:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 37
+[15-Jun-2026 21:50:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 37
+[16-Jun-2026 02:42:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 28
+[16-Jun-2026 03:16:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php:28
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 28
+[16-Jun-2026 03:31:18 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[16-Jun-2026 03:41:24 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[16-Jun-2026 03:43:42 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[16-Jun-2026 12:36:52 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[16-Jun-2026 13:14:18 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[16-Jun-2026 20:29:24 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[17-Jun-2026 03:03:00 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[17-Jun-2026 12:34:22 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[29-Jun-2026 22:30:07 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[29-Jun-2026 22:30:07 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 80
+[29-Jun-2026 22:30:07 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 81
+[29-Jun-2026 22:30:19 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[29-Jun-2026 22:30:19 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 80
+[29-Jun-2026 22:30:19 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 81
+[29-Jun-2026 22:42:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[29-Jun-2026 22:42:48 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 80
+[29-Jun-2026 22:42:48 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 81
+[29-Jun-2026 23:25:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[29-Jun-2026 23:25:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[29-Jun-2026 23:25:47 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[29-Jun-2026 23:25:47 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 80
+[29-Jun-2026 23:25:47 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 81
+[29-Jun-2026 23:26:11 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[29-Jun-2026 23:26:11 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 80
+[29-Jun-2026 23:26:11 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 81
+[30-Jun-2026 00:12:26 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 76
+[30-Jun-2026 00:12:26 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 80
+[30-Jun-2026 00:12:26 UTC] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 81
+[30-Jun-2026 00:28:08 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 00:29:01 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 00:30:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[30-Jun-2026 00:34:50 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 00:38:17 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 02:19:10 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 02:19:19 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 02:19:51 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 02:20:02 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 02:20:09 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 29
+[30-Jun-2026 02:25:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/sanctuaryshieldllc.com/public_html/vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 17
+[30-Jun-2026 02:26:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/sanctuaryshieldllc.com/public_html/vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/send-consultation.php on line 17
+[30-Jun-2026 12:58:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[30-Jun-2026 12:58:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[30-Jun-2026 12:59:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[30-Jun-2026 13:19:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[30-Jun-2026 13:19:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[10-Jul-2026 15:13:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35
+[10-Jul-2026 15:13:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/sanctuaryshieldllc.com/public_html/test-smtp.php on line 35

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Protect your church's testimony, people, and resources with a biblical, practical safety &amp; security ministry. Sanctuary Shield offers trusted consulting for houses of worship and Christian schools nationwide. Schedule your free initial consultation.">
+    <title>Sanctuary Shield | Biblical Safety &amp; Security for Churches &amp; Christian Schools</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.05;
+        }
+
+        .section-header {
+            font-size: 2.1rem;
+            line-height: 2.4rem;
+            font-weight: 700;
+            color: #1e3a5f;
+        }
+
+        .nav-scrolled {
+            box-shadow: 0 1px 0 0 rgb(226 232 240);
+            background-color: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+        }
+
+        .risk-card, .step-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .risk-card:hover, .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .framework-step {
+            position: relative;
+        }
+        
+        .framework-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 1.65rem;
+            top: 3.1rem;
+            bottom: -1.25rem;
+            width: 3px;
+            background: linear-gradient(to bottom, #1e3a5f, #64748b);
+            opacity: 0.12;
+        }
+
+        .content-prose p {
+            margin-bottom: 1.1rem;
+            color: #334155;
+            line-height: 1.7;
+        }
+
+        .logo-img {
+            height: 42px;
+            width: auto;
+        }
+
+        .hero-logo {
+            max-height: 180px;
+            width: auto;
+        }
+
+        .stat-box {
+            background: linear-gradient(145deg, #f8fafc, #f1e7d2);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 smooth-scroll">
+
+    <!-- Navigation -->
+    <nav id="nav" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <img src="sanctuary-shield-logo.jpg" alt="Sanctuary Shield Logo" class="logo-img">
+                    <div class="hidden sm:block">
+                        <span class="font-semibold text-2xl tracking-tighter text-[#1e3a5f]">Sanctuary Shield</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#whats-at-stake" class="text-slate-600 hover:text-[#1e3a5f] transition-colors">What's at Stake</a>
+                    <a href="#how-to-start" class="text-slate-600 hover:text-[#1e3a5f] transition-colors">How to Start</a>
+                    <a href="#how-to-implement" class="text-slate-600 hover:text-[#1e3a5f] transition-colors">Our Approach</a>
+                    <a href="#who-we-are" class="text-slate-600 hover:text-[#1e3a5f] transition-colors">Who We Serve</a>
+                    <a href="#christian-schools" class="text-slate-600 hover:text-[#1e3a5f] transition-colors">Christian Schools</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-x-3">
+                    <a href="#consultation" 
+                       class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-300 text-[#1e3a5f] hover:bg-slate-50 transition-all">
+                        Contact Us
+                    </a>
+                    <a href="#consultation" 
+                       class="inline-flex items-center px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#1e3a5f] text-white hover:bg-[#162d4a] transition-all shadow-sm">
+                        Schedule Consultation
+                    </a>
+                    
+                    <!-- Mobile Menu -->
+                    <button id="mobile-menu-btn" 
+                            class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600 hover:text-[#1e3a5f] hover:bg-slate-100 rounded-xl transition-colors"
+                            aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#whats-at-stake" class="py-1 text-slate-600 hover:text-[#1e3a5f]">What's at Stake</a>
+                <a href="#how-to-start" class="py-1 text-slate-600 hover:text-[#1e3a5f]">How to Start</a>
+                <a href="#how-to-implement" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Our Approach</a>
+                <a href="#who-we-are" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Who We Serve</a>
+                <a href="#christian-schools" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Christian Schools</a>
+                <div class="pt-3 border-t flex flex-col gap-y-2">
+                    <a href="#consultation" class="w-full text-center py-3 rounded-2xl border border-slate-300 text-[#1e3a5f] font-semibold">Contact Us</a>
+                    <a href="#consultation" class="w-full text-center py-3 rounded-2xl bg-[#1e3a5f] text-white font-semibold">Schedule Free Consultation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (unchanged) -->
+    <header class="bg-[#1e3a5f] text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#ffffff10_0.8px,transparent_1px)] bg-[length:4px_4px]"></div>
+        
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 pt-14 pb-16 lg:pt-16 lg:pb-20 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                
+                <!-- Logo in Hero -->
+                <div class="flex justify-center mb-8">
+                    <img src="sanctuary-shield-logo.jpg" alt="Sanctuary Shield - Protecting Testimony, People &amp; Resources" 
+                         class="hero-logo drop-shadow-xl">
+                </div>
+                
+                <h1 class="heading-serif text-5xl lg:text-6xl leading-none tracking-tighter mb-6">
+                    Protecting what matters...<br>
+                    <span class="text-slate-200">So you can focus on what matters most.</span>
+                </h1>
+                
+                <p class="max-w-2xl mx-auto text-xl text-slate-200 mb-9">
+                    We provide a biblical, practical, and sustainable approach to safety &amp; security for churches <strong>and Christian schools</strong> — safeguarding testimony, protecting people, and stewarding resources.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#consultation" 
+                       class="inline-flex items-center justify-center gap-x-3 px-8 py-4 text-lg font-semibold rounded-3xl bg-white text-[#1e3a5f] hover:bg-amber-50 transition-all shadow-xl group">
+                        <span>Schedule Your Free Initial Consultation</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition-transform"></i>
+                    </a>
+                    <a href="#how-to-start" 
+                       class="inline-flex items-center justify-center gap-x-2 px-7 py-4 text-lg font-medium rounded-3xl border border-white/30 hover:bg-white/10 transition-all">
+                        See How to Get Started
+                    </a>
+                </div>
+                
+                <div class="mt-8 text-sm text-slate-300 flex items-center justify-center gap-x-2">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Veteran-owned • Serving churches &amp; Christian schools nationwide</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust Bar (unchanged) -->
+    <div class="border-b border-slate-200 bg-white py-4">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-xs uppercase tracking-[1.5px] font-semibold text-slate-500">
+                <div>Biblically Grounded</div>
+                <div>Legally Informed</div>
+                <div>Practical &amp; Scalable</div>
+                <div>Grant Writing Support</div>
+                <div>Independent &amp; Objective</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Existing sections remain the same (truncated for brevity in this response) -->
+
+    <!-- NEW: Christian Schools Section -->
+    <section id="christian-schools" class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-14 bg-white border-t border-slate-100">
+        <div class="max-w-3xl mx-auto">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-amber-700 mb-3">EXPANDING OUR MINISTRY</div>
+            <h2 class="section-header mb-6">Christian Schools &amp; Academies</h2>
+            
+            <div class="prose max-w-none text-lg text-slate-700 mb-8">
+                <p>Christian schools combine the open, welcoming nature of a church with the daily responsibilities of educating and protecting children. This creates unique vulnerabilities that require specialized, biblically grounded solutions.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Testimony -->
+                <div class="risk-card bg-white rounded-3xl p-8 shadow-sm border border-slate-100 h-full">
+                    <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+                        <i class="fa-solid fa-graduation-cap fa-lg"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to School Testimony</h3>
+                    <div class="content-prose text-[15px]">
+                        <p>Parents choose Christian education for spiritual formation and safety. Incidents can devastate enrollment and trust.</p>
+                        <ul class="mt-4 space-y-2 text-sm">
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Enrollment decline and donor withdrawal</li>
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Accreditation and regulatory challenges</li>
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Long-term reputational harm</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Students & Staff -->
+                <div class="risk-card bg-white rounded-3xl p-8 shadow-sm border border-slate-100 h-full">
+                    <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+                        <i class="fa-solid fa-children fa-lg"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to Students &amp; Staff</h3>
+                    <div class="content-prose text-[15px]">
+                        <p>Daily student traffic, after-school programs, and faculty responsibilities increase exposure.</p>
+                        <ul class="space-y-2 text-sm mt-4">
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Higher volume of visitors and traffic</li>
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Mandatory reporting for educators</li>
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Comprehensive background screening</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="risk-card bg-white rounded-3xl p-8 shadow-sm border border-slate-100 h-full">
+                    <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+                        <i class="fa-solid fa-building-columns fa-lg"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to School Resources</h3>
+                    <div class="content-prose text-[15px]">
+                        <p>Tight budgets make financial impacts particularly painful.</p>
+                        <ul class="space-y-2 text-sm mt-4">
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Lawsuits and insurance increases</li>
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Loss of funding or accreditation</li>
+                            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Cyber risks to student data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 p-8 bg-slate-50 border border-slate-200 rounded-3xl text-center">
+                <p class="text-lg font-medium text-[#1e3a5f]">The same proven framework we use for churches — adapted for the unique needs of Christian education.</p>
+                <a href="#consultation" class="mt-6 inline-flex items-center px-8 py-3.5 rounded-3xl bg-[#1e3a5f] text-white font-semibold hover:bg-[#162d4a] transition-all">
+                    Discuss Your School’s Needs →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of your original sections (cost, consultation, footer) remain unchanged -->
+
+</body>
+</html>

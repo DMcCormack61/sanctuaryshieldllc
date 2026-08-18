@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Protect your church's testimony, people, and resources with a biblical, practical safety &amp; security ministry. Sanctuary Shield offers trusted consulting for houses of worship nationwide. Schedule your free initial consultation.">
+  <title>Sanctuary Shield | Biblical Safety &amp; Security for Churches</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap');
+    
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(15, 23, 42, 0.58), rgba(15, 23, 42, 0.68)), url('assets/images/hero.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+
+    .section-header {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.1rem;
+      line-height: 1.1;
+      font-weight: 700;
+      color: #1e3a5f;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #c5a46e;
+    }
+
+    .shield-card, .step-card {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .shield-card:hover, .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .gold-accent {
+      color: #c5a46e;
+    }
+
+    .nav-scrolled {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 0 rgb(226 232 240);
+    }
+
+    .risk-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+    }
+
+    .content-prose p {
+      margin-bottom: 1.05rem;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .stat-box {
+      background: linear-gradient(145deg, #f8fafc, #f1e7d2);
+    }
+
+    .framework-step {
+      position: relative;
+    }
+
+    .nav {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYXXK646PG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YYXXK646PG');
+</script>
+<body class="bg-stone-50 text-slate-800">
+
+  <!-- Navigation -->
+  <nav id="nav" class="bg-white border-b border-stone-200 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-x-3">
+          <div class="w-9 h-9 rounded-2xl bg-slate-900 flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+          </div>
+          <div>
+            <span class="font-semibold text-2xl tracking-tighter text-[#1e3a5f]">Sanctuary</span>
+            <span class="font-semibold text-2xl tracking-tighter gold-accent">Shield</span>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium nav">
+          <a href="#" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+          <a href="services_table.html" class="nav-link text-slate-600 hover:text-slate-900">Services</a>
+          <a href="church-attack-headlines.html" class="nav-link text-slate-600 hover:text-slate-900">Headlines</a>
+          <a href="church-security-news.html" class="nav-link text-slate-600 hover:text-slate-900">Security News</a>
+          <a href="blog.html" class="nav-link text-slate-600 hover:text-slate-900">Blog</a>
+          <a href="securing-the-sanctuary.html" class="nav-link text-slate-600 hover:text-slate-900">Book</a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex items-center gap-x-3">
+          <a href="#consultation" 
+             class="hidden sm:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-2xl border border-stone-300 text-[#1e3a5f] hover:bg-stone-50 transition-all">
+            Contact Us
+          </a>
+          <a href="#consultation" 
+             class="inline-flex items-center px-6 py-2.5 text-sm font-semibold rounded-2xl bg-[#1e3a5f] text-white hover:bg-[#162d4a] transition-all shadow-sm">
+            Schedule Consultation
+          </a>
+          
+          <!-- Mobile Menu -->
+          <button id="mobile-menu-btn" 
+                  class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600 hover:text-[#1e3a5f] hover:bg-stone-100 rounded-xl transition-colors"
+                  aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-6 py-4">
+      <div class="flex flex-col gap-y-4 text-sm font-medium">
+        <a href="#" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Home</a>
+        <a href="services_table.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Services</a>
+        <a href="church-attack-headlines.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Headlines</a>
+        <a href="church-security-news.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Security News</a>
+        <a href="blog.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Blog</a>
+		        <a href="securing-the-sanctuary.html" class="py-1 text-slate-600 hover:text-[#1e3a5f]">Book</a>
+        <div class="pt-3 border-t flex flex-col gap-y-2">
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl border border-stone-300 text-[#1e3a5f] font-semibold">Contact Us</a>
+          <a href="#consultation" class="w-full text-center py-3 rounded-2xl bg-[#1e3a5f] text-white font-semibold">Schedule Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero with image background -->
+  <header class="hero-bg h-[100dvh] min-h-[620px] flex items-center relative text-white">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 pt-8 pb-12 lg:pt-10 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl text-xs tracking-[2px] mb-7 border border-white/20 font-medium">
+          <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
+          VETERAN-OWNED
+                    <div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></div>
+          Over Four Decades Experience
+        </div>
+        
+        <h1 class="heading-serif text-3xl lg:text-[3.6rem] leading-[1.05] tracking-[-1.8px] mb-6">
+          Protecting what matters...<br>
+          <span class="text-slate-200">So you can focus on what matters most.</span>
+        </h1>
+        
+        <p class="max-w-xl text-xl text-white/90 mb-8">
+          We provide a biblical, practical, and sustainable approach to safety &amp; security that safeguards your testimony, 
+          protects your people, and stewards your resources — without becoming a distraction.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#consultation" 
+             class="inline-flex items-center justify-center gap-x-3 px-8 py-4 text-lg font-semibold rounded-3xl bg-white text-[#1e3a5f] hover:bg-amber-50 transition-all shadow-xl group">
+            <span>Schedule Your Free Initial Consultation</span>
+            <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition-transform"></i>
+          </a>
+          <a href="#how-to-start" 
+             class="inline-flex items-center justify-center gap-x-2 px-7 py-4 text-lg font-medium rounded-3xl border border-white/40 hover:bg-white/10 transition-all">
+            See How to Get Started
+          </a>
+        </div>
+        
+        <div class="mt-10 flex items-center gap-x-2 text-sm text-white/70">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Serving churches and Christian schools nationwide</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trust Bar -->
+  <div class="border-b border-stone-200 bg-white py-4">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-xs uppercase tracking-[1.5px] font-semibold text-slate-500">
+        <div>Biblically Grounded</div>
+        <div>Legally Informed</div>
+        <div>Practical &amp; Scalable</div>
+        <div>Independent &amp; Objective</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT'S AT STAKE -->
+  <section id="whats-at-stake" class="max-w-screen-2xl mx-auto px-6 lg:px-8 pt-14 pb-10">
+    <div class="max-w-3xl mb-9">
+      <div class="uppercase tracking-[2px] text-xs font-semibold text-amber-700 mb-3">THE COST OF INACTION</div>
+      <h2 class="section-header">What’s at Stake: Testimony, People &amp; Resources</h2>
+      <p class="text-xl text-slate-600">In an unpredictable world, proactive stewardship of safety and security is not optional — it is faithful leadership.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Testimony -->
+      <div class="shield-card risk-card rounded-3xl p-8 h-full">
+        <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+          <i class="fa-solid fa-church fa-lg"></i>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to Testimony</h3>
+        <div class="content-prose text-[15px]">
+          <p>High-profile incidents damage public perception and may diminish your ability to minister to your congregation and community.</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Media scrutiny and long-term reputational harm</li>
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Legal battles that drain focus and finances</li>
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Erosion of trust when the vulnerable are not protected</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- People -->
+      <div class="shield-card risk-card rounded-3xl p-8 h-full">
+        <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+          <i class="fa-solid fa-users fa-lg"></i>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to People</h3>
+        <div class="content-prose text-[15px]">
+          <p>Your congregation likely spans from independent and agile to dependent and vulnerable. Physical threats, medical emergencies, and failures in child protection can cause profound and lasting harm.</p>
+          
+          <div class="stat-box mt-5 mb-5 rounded-2xl p-4 text-sm border border-slate-200">
+            Research tracking incidents at U.S. houses of worship (2000–2024) documents hundreds of violent events and nearly 500 deaths. While mass attacks are statistically rare, the consequences are devastating when they occur.
+          </div>
+          
+          <ul class="space-y-2 text-sm">
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Physical harm or loss of life</li>
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Trauma to survivors, families, and the body of Christ</li>
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Long-term spiritual damage from betrayal of trust</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="shield-card risk-card rounded-3xl p-8 h-full">
+        <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+          <i class="fa-solid fa-hand-holding-dollar fa-lg"></i>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to Resources</h3>
+        <div class="content-prose text-[15px]">
+          <p>Incidents may create immediate and long-term financial strain through lawsuits, insurance increases, property damage, cyber attacks, and declining attendance and giving.</p>
+          
+          <div class="mt-4 mb-5">
+            <div class="text-xs uppercase tracking-widest text-slate-500 mb-1">Rising Threat</div>
+            <p class="text-sm">Ransomware and data extortion attacks on churches and faith-based organizations are increasing. Recovery costs frequently exceed ransoms, and many general liability policies have significant gaps in security-related coverage.</p>
+          </div>
+          
+          <ul class="space-y-2 text-sm">
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Costly litigation and potential uninsured liability</li>
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Operational disruption and lost revenue</li>
+            <li class="flex gap-x-2"><span class="text-amber-600">•</span> Leadership time diverted to crisis response</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO START -->
+  <section id="how-to-start" class="max-w-screen-2xl mx-auto px-6 lg:px-8 pt-14 pb-10 bg-white border-b border-stone-100">
+    <div class="max-w-3xl mb-9">
+      <div class="uppercase tracking-[2px] text-xs font-semibold text-emerald-700 mb-3">A CLEAR PATH FORWARD</div>
+      <h2 class="section-header">How to Start</h2>
+      <p class="text-xl text-slate-600">Protecting your church doesn’t require a massive overhaul. It begins with a deliberate, step-by-step process.</p>
+    </div>
+
+    <div class="grid md:grid-cols-5 gap-5">
+      <div class="step-card bg-stone-50 border border-stone-200 rounded-3xl p-6">
+        <div class="text-[#1e3a5f] font-mono text-sm font-semibold mb-3">01</div>
+        <h4 class="font-semibold text-lg tracking-tight mb-2">Learn the threats and risks</h4>
+        <p class="text-sm text-slate-600">Understand the range of challenges facing churches — physical, cyber, reputational, and legal.</p>
+      </div>
+      <div class="step-card bg-stone-50 border border-stone-200 rounded-3xl p-6">
+        <div class="text-[#1e3a5f] font-mono text-sm font-semibold mb-3">02</div>
+        <h4 class="font-semibold text-lg tracking-tight mb-2">Identify particular threats to your church</h4>
+        <p class="text-sm text-slate-600">Every congregation has unique vulnerabilities based on location, size, ministries, facility layout, and community context.</p>
+      </div>
+      <div class="step-card bg-stone-50 border border-stone-200 rounded-3xl p-6">
+        <div class="text-[#1e3a5f] font-mono text-sm font-semibold mb-3">03</div>
+        <h4 class="font-semibold text-lg tracking-tight mb-2">Assess existing capabilities</h4>
+        <p class="text-sm text-slate-600">Perform an objective inventory of current policies, training, procedures, team structure, and physical measures already in place.</p>
+      </div>
+      <div class="step-card bg-stone-50 border border-stone-200 rounded-3xl p-6">
+        <div class="text-[#1e3a5f] font-mono text-sm font-semibold mb-3">04</div>
+        <h4 class="font-semibold text-lg tracking-tight mb-2">Address gaps</h4>
+        <p class="text-sm text-slate-600">Prioritize and address the most likely and most damaging vulnerabilities with realistic, scalable, and biblically grounded solutions.</p>
+      </div>
+      <div class="step-card bg-stone-50 border border-stone-200 rounded-3xl p-6">
+        <div class="text-[#1e3a5f] font-mono text-sm font-semibold mb-3">05</div>
+        <h4 class="font-semibold text-lg tracking-tight mb-2">Continuously evaluate and adjust</h4>
+        <p class="text-sm text-slate-600">A healthy safety and security ministry matures with your church through regular reviews, training, and after-action learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHEN? -->
+  <section class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-12">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="uppercase tracking-[2px] text-xs font-semibold text-amber-700 mb-3">THE BEST TIME IS BEFORE YOU NEED IT</div>
+      <h2 class="section-header mb-5">When?</h2>
+      <p class="text-2xl font-medium tracking-tight text-[#1e3a5f]">Now.</p>
+      <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Disasters, accidents, and threats don't follow a schedule. The best time to strengthen these systems is before you need them — exactly like maintaining the roof, HVAC, or plumbing.</p>
+    </div>
+  </section>
+
+  <!-- HOW TO IMPLEMENT & SUSTAIN -->
+  <section id="how-to-implement" class="bg-white border-y border-stone-100 py-14">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="max-w-3xl mb-9">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-[#1e3a5f] mb-3">A DELIBERATE, PROVEN APPROACH</div>
+        <h2 class="section-header">How to Implement &amp; Sustain</h2>
+        <p class="text-xl text-slate-600"><i>Ad-hoc</i> measures and “security theater” create false confidence. Lasting protection requires clear intent, solid policies, trained people, and ongoing discipline.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-x-10 gap-y-10">
+        <!-- Implement -->
+        <div>
+          <h3 class="font-semibold text-xl tracking-tight text-[#1e3a5f] mb-5">Implementation Framework</h3>
+          
+          <div class="space-y-6">
+            <div class="flex gap-x-5">
+              <div class="flex-shrink-0 w-8 h-8 rounded-xl bg-[#1e3a5f] text-white flex items-center justify-center text-sm font-bold">1</div>
+              <div>
+                <div class="font-semibold">Develop Overall Intent</div>
+                <p class="text-sm text-slate-600 mt-1">A theologically grounded Safety &amp; Security Ministry Intent Statement approved by your leadership that serves as the north star for every decision.</p>
+              </div>
+            </div>
+            <div class="flex gap-x-5">
+              <div class="flex-shrink-0 w-8 h-8 rounded-xl bg-[#1e3a5f] text-white flex items-center justify-center text-sm font-bold">2</div>
+              <div>
+                <div class="font-semibold">Establish Supporting Policies</div>
+                <p class="text-sm text-slate-600 mt-1">Clear, written policies covering child protection, disruption response, facility access, cybersecurity, medical emergencies, and incident reporting.</p>
+              </div>
+            </div>
+            <div class="flex gap-x-5">
+              <div class="flex-shrink-0 w-8 h-8 rounded-xl bg-[#1e3a5f] text-white flex items-center justify-center text-sm font-bold">3</div>
+              <div>
+                <div class="font-semibold">Build Organization &amp; Procedures</div>
+                <p class="text-sm text-slate-600 mt-1">Establish or formalize an existing Safety &amp; Security Team with defined roles, documented procedures, role-specific training, drills, and OODA-informed decision making.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sustain -->
+        <div>
+          <h3 class="font-semibold text-xl tracking-tight text-[#1e3a5f] mb-5">Sustaining the Ministry</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5">
+              <div class="font-semibold mb-2">Leadership Investment</div>
+              <p class="text-slate-600">Visible support from senior leadership and governing board, with realistic budget and time allocation.</p>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5">
+              <div class="font-semibold mb-2">Regular Reviews and Learning</div>
+              <p class="text-slate-600">Annual risk assessments, quarterly team meetings, and disciplined after-action reviews after drills or incidents.</p>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5">
+              <div class="font-semibold mb-2">Cultural Integration</div>
+              <p class="text-slate-600">Safety awareness woven into volunteer onboarding, leadership development, and occasional church-wide emphasis.</p>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-5">
+              <div class="font-semibold mb-2">Documentation &amp; Succession</div>
+              <p class="text-slate-600">Document everything so knowledge becomes accessible and transferable. Develop clear succession planning for key roles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE -->
+  <section id="who-we-are" class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-14">
+    <div class="max-w-3xl mx-auto">
+      <div class="uppercase tracking-[2px] text-xs font-semibold text-emerald-700 mb-3">THE RIGHT PARTNER MATTERS</div>
+      <h2 class="section-header mb-6">Who We Serve</h2>
+      
+      <div class="prose max-w-none text-lg text-slate-700">
+        <p>We focus exclusively on Christian Churches, Schools, and Supporting Organizations. While we glean the best practices from defense, government, and coporate security and safety practices and protocols, we bring a unique Bible-centered approach to our work.</p>
+        
+        <p>We want to work with you as a trusted partner who understands how to design and implement safety and security that complements -- and never distracts -- from your primary mission.</p>
+        
+        <p class="mt-5">We don't think about the roof, the HVAC system, or the plumbing -- we rely on those systems and they soon become invisible.</p>
+        
+        <p class="mt-5 font-medium text-[#1e3a5f]">The same should be true of a well-designed safety and security ministry: it becomes reliable, professional, and largely invisible — so your church can focus on worship, discipleship, and mission without distraction or anxiety.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHRISTIAN SCHOOLS -->
+  <section id="christian-schools" class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-14 bg-white border-t border-stone-100">
+    <div class="max-w-3xl mx-auto">
+      <div class="uppercase tracking-[2px] text-xs font-semibold text-amber-700 mb-3">EXPANDING OUR MINISTRY</div>
+      <h2 class="section-header mb-6">Christian Schools &amp; Academies</h2>
+      
+      <div class="prose max-w-none text-lg text-slate-700 mb-8">
+        <p>Christian schools combine the open, welcoming nature of a church with the daily responsibilities of educating and protecting children. This creates unique vulnerabilities that require specialized, biblically grounded solutions.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="shield-card risk-card rounded-3xl p-8 h-full">
+          <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+            <i class="fa-solid fa-graduation-cap fa-lg"></i>
+          </div>
+          <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to School Testimony</h3>
+          <div class="content-prose text-[15px]">
+            <p>Parents choose Christian education for spiritual formation and safety. Incidents can devastate enrollment and trust.</p>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Enrollment decline and donor withdrawal</li>
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Accreditation and regulatory challenges</li>
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Long-term reputational harm</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="shield-card risk-card rounded-3xl p-8 h-full">
+          <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+            <i class="fa-solid fa-children fa-lg"></i>
+          </div>
+          <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to Students &amp; Staff</h3>
+          <div class="content-prose text-[15px]">
+            <p>Daily student traffic, after-school programs, and faculty responsibilities increase exposure.</p>
+            <ul class="space-y-2 text-sm mt-4">
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Higher volume of visitors and traffic</li>
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Mandatory reporting for educators</li>
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Comprehensive background screening</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="shield-card risk-card rounded-3xl p-8 h-full">
+          <div class="w-11 h-11 flex items-center justify-center rounded-2xl bg-[#f1e7d2] text-[#1e3a5f] mb-6">
+            <i class="fa-solid fa-building-columns fa-lg"></i>
+          </div>
+          <h3 class="text-2xl font-semibold tracking-tight text-[#1e3a5f] mb-4">Risks to School Resources</h3>
+          <div class="content-prose text-[15px]">
+            <p>Tight budgets make financial impacts particularly painful.</p>
+            <ul class="space-y-2 text-sm mt-4">
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Lawsuits and insurance increases</li>
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Loss of funding or accreditation</li>
+              <li class="flex gap-x-2"><span class="text-amber-600">•</span> Cyber risks to student data</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 p-8 bg-stone-50 border border-stone-200 rounded-3xl text-center">
+        <p class="text-lg font-medium text-[#1e3a5f]">The same proven framework we use for churches — adapted for the unique needs of Christian education.</p>
+        <a href="#consultation" class="mt-6 inline-flex items-center px-8 py-3.5 rounded-3xl bg-[#1e3a5f] text-white font-semibold hover:bg-[#162d4a] transition-all">
+          Discuss Your School’s Needs →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COST -->
+  <section class="bg-[#1e3a5f] text-slate-200 py-14">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-amber-400 mb-3">TRANSPARENT FROM THE START</div>
+        <h2 class="text-white text-3xl font-semibold tracking-tight mb-5 heading-serif">What Is It Going to Cost?</h2>
+        <p class="text-xl text-slate-300">Costs will be dependent on your circumstances, expectations, resources, and existing risks and threats.</p>
+        <p class="mt-4 text-lg">The initial consultation is designed to start a clear-eyed assessment of your specific situation to help determine scope, priorities, timeline, and investment.</p>
+        <p class="mt-4 text-lg">Sanctuary Shield started as a ministry, and we can work with you to keep costs low. In some cases we can provide no-charge assistance. Contact us to learn more!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA / CONSULTATION FORM -->
+  <section id="consultation" class="max-w-screen-2xl mx-auto px-6 lg:px-8 py-16 bg-white">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <div class="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-wider mb-4">NO-OBLIGATION CONVERSATION</div>
+      <h2 class="text-4xl font-semibold tracking-tighter text-[#1e3a5f] mb-4">Ready to protect what matters most?</h2>
+      <p class="text-xl text-slate-600">Schedule your complimentary 45-minute initial consultation. We’ll listen to your context, discuss your specific concerns, and explore whether a tailored safety &amp; security framework is the right next step for your church.</p>
+    </div>
+
+    <div class="max-w-2xl mx-auto">
+      <form id="consultation-form" action="send-consultation.php" method="POST" class="bg-white border border-stone-200 shadow-xl rounded-3xl p-8 lg:p-10">
+        <!-- Honeypot -->
+        <input type="text" name="website" style="display:none">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6">
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5" for="full-name">FULL NAME</label>
+            <input type="text" id="full-name" name="name" required class="w-full rounded-2xl border border-stone-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1e3a5f] transition-colors" placeholder="Pastor John Smith">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5" for="role">YOUR ROLE AT THE CHURCH</label>
+            <input type="text" id="role" name="role" required class="w-full rounded-2xl border border-stone-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1e3a5f] transition-colors" placeholder="Lead Pastor / Elder / Safety Director">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5" for="church-name">CHURCH NAME</label>
+            <input type="text" id="church-name" name="church" required class="w-full rounded-2xl border border-stone-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1e3a5f] transition-colors" placeholder="Grace Community Church">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5" for="location">CITY / STATE</label>
+            <input type="text" id="location" name="location" required class="w-full rounded-2xl border border-stone-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1e3a5f] transition-colors" placeholder="Lancaster, PA">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5" for="email">EMAIL ADDRESS</label>
+            <input type="email" id="email" name="_replyto" required class="w-full rounded-2xl border border-stone-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1e3a5f] transition-colors" placeholder="you@yourchurch.org">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5" for="phone">PHONE (OPTIONAL)</label>
+            <input type="tel" id="phone" name="phone" class="w-full rounded-2xl border border-stone-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1e3a5f] transition-colors" placeholder="(717) 555-0123">
+          </div>
+        </div>
+        
+        <div class="mt-6">
+          <label class="block text-xs font-semibold tracking-wider text-slate-500 mb-1.5" for="concerns">BRIEF DESCRIPTION OF YOUR CURRENT SITUATION OR PRIMARY CONCERNS (OPTIONAL)</label>
+          <textarea id="concerns" name="message" rows="3" class="w-full rounded-2xl border border-stone-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1e3a5f] transition-colors resize-y min-h-[90px]" placeholder="We are a mid-sized church with an active children’s ministry and have begun discussing security after recent local incidents..."></textarea>
+        </div>
+        
+        <div class="mt-6 flex items-start gap-x-3">
+          <input type="checkbox" id="consent" name="consent" value="1" required class="mt-1 accent-[#1e3a5f]">
+          <label for="consent" class="text-xs text-slate-600">I understand this is a confidential, no-obligation conversation. Sanctuary Shield will use my information only to prepare for and follow up on our discussion.</label>
+        </div>
+        
+        <button type="submit" class="mt-6 w-full inline-flex items-center justify-center gap-x-3 rounded-3xl bg-[#1e3a5f] hover:bg-[#162d4a] transition-all py-4 text-white font-semibold text-lg shadow-lg">
+          <span>Request My Free Consultation</span>
+          <i class="fa-solid fa-calendar-check"></i>
+        </button>
+        
+        <p class="text-center text-[10px] text-slate-400 mt-4 tracking-wide">We typically respond within one business day to schedule a time convenient for your leadership team.</p>
+      </form>
+      
+      <!-- Success Message -->
+      <div id="form-success" class="hidden mt-6 bg-emerald-50 border border-emerald-200 rounded-3xl p-8 text-center">
+        <div class="mx-auto w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-4">
+          <i class="fa-solid fa-check-circle fa-2x"></i>
+        </div>
+        <h3 class="text-2xl font-semibold text-emerald-800 tracking-tight mb-2">Thank you. Your request has been received.</h3>
+        <p class="text-emerald-700 max-w-sm mx-auto">We've received your consultation request. A member of the Sanctuary Shield team will contact you within one business day to schedule a time that works for you and your leadership.</p>
+        <button onclick="resetForm()" class="mt-6 text-sm font-medium text-emerald-700 hover:text-emerald-800 underline">Submit another request</button>
+      </div>
+    </div>
+    
+    <div class="text-center mt-10 text-xs text-slate-500">
+      Sanctuary Shield LLC • Mount Joy, Pennsylvania • Veteran-Owned<br>
+      Over 40 Years experience in High Threat, Highly Secure Facilities. Serving houses of worship and churches across the United States.
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1e3a5f] text-slate-300 py-9 text-sm">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-center md:text-left">
+        <div>
+          <div class="flex items-center justify-center md:justify-start gap-x-2 mb-1">
+            <div class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
+              <i class="fa-solid fa-shield-halved text-sm text-white"></i>
+            </div>
+            <span class="font-semibold text-white tracking-tighter text-lg">Sanctuary Shield LLC</span>
+          </div>
+          <p class="text-xs">Biblical Wisdom • Practical Protection • Enduring Peace of Mind</p>
+        </div>
+        
+        <div class="text-xs max-w-xs">
+          <span class="font-mono">"Unless the LORD builds the house, those who build it labor in vain. Unless the LORD watches over the city, the watchman stays awake in vain."</span><br>
+          <span class="opacity-75">— Psalm 127:1</span>
+        </div>
+        
+        <div class="text-xs">
+          © 2026 Sanctuary Shield LLC. All rights reserved.<br>
+          An independent consulting practice not affiliated with any denomination.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect + mobile menu
+    function initNavbar() {
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      });
+      
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          const icon = mobileBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+          }
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileBtn.querySelector('i');
+            if (icon) {
+              icon.classList.add('fa-bars');
+              icon.classList.remove('fa-times');
+            }
+          });
+        });
+      }
+    }
+    
+    function initForm() {
+      const form = document.getElementById('consultation-form');
+      const successMsg = document.getElementById('form-success');
+      
+      if (!form) return;
+      
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+        
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin ml-2"></i>`;
+        }
+        
+        const formData = new FormData(form);
+        
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            form.style.display = 'none';
+            successMsg.classList.remove('hidden');
+            successMsg.classList.add('block');
+          } else {
+            const result = await response.json().catch(() => ({}));
+            let errorMsg = result.message || 'There was a problem submitting the form. Please try again or contact us directly at info@sanctuaryshieldllc.com';
+            if (result.errors && Array.isArray(result.errors) && result.errors.length > 0) {
+              errorMsg = result.errors.join('\n');
+            }
+            alert(errorMsg);
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            }
+          }
+        } catch (error) {
+          alert('There was a network error submitting the form. Please try again or contact us directly at info@sanctuaryshieldllc.com');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+        }
+      });
+    }
+    
+    function resetForm() {
+      const form = document.getElementById('consultation-form');
+      const successMsg = document.getElementById('form-success');
+      
+      if (form && successMsg) {
+        form.reset();
+        form.style.display = 'block';
+        successMsg.classList.add('hidden');
+        successMsg.classList.remove('block');
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    }
+    
+    // Smooth scroll for anchor links
+    function initSmoothScroll() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            const navHeight = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+    
+    function initializePage() {
+      initNavbar();
+      initForm();
+      initSmoothScroll();
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializePage);
+    } else {
+      initializePage();
+    }
+  </script>
+</body>
+</html>
